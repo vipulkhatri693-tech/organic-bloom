@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <!-- Warm cream aesthetic background -->
+    <linearGradient id="riceBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBF8F2"/>
+      <stop offset="50%" stop-color="#F2EDE2"/>
+      <stop offset="100%" stop-color="#E5DCCE"/>
+    </linearGradient>
+
+    <!-- Warm wooden saucer gradient -->
+    <radialGradient id="riceWoodSaucer" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D7AA77"/>
+      <stop offset="60%" stop-color="#BC8A55"/>
+      <stop offset="90%" stop-color="#9E6E3C"/>
+      <stop offset="100%" stop-color="#7B5026"/>
+    </radialGradient>
+
+    <!-- Ivory Cold Process Rice Soap Gradient -->
+    <linearGradient id="ivorySoap" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="30%" stop-color="#FAF7EE"/>
+      <stop offset="70%" stop-color="#F3ECE0"/>
+      <stop offset="100%" stop-color="#E5DC handle"/>
+    </linearGradient>
+
+    <!-- Soap shadow -->
+    <filter id="riceSoapShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#423425" flood-opacity="0.3"/>
+    </filter>
+    <filter id="saucerShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#554230" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="1000" fill="url(#riceBg)"/>
+
+  <!-- Soft olive leaf silhouettes in background -->
+  <g opacity="0.18" fill="#3D5A40">
+    <ellipse cx="680" cy="140" rx="90" ry="180" transform="rotate(30 680 140)"/>
+    <ellipse cx="740" cy="280" rx="70" ry="140" transform="rotate(45 740 280)"/>
+    <ellipse cx="120" cy="160" rx="80" ry="160" transform="rotate(-35 120 160)"/>
+  </g>
+
+  <!-- Top Logo Header -->
+  <g transform="translate(400, 110)">
+    <!-- Delicate floral branch motif -->
+    <path d="M -50 -35 Q 0 -45 50 -35" stroke="#355239" stroke-width="1.5" fill="none"/>
+    <circle cx="0" cy="-40" r="3" fill="#C4883B"/>
+    <text x="0" y="0" font-family="'Cormorant Garamond', Georgia, serif" font-size="44" font-weight="700" fill="#1E3324" text-anchor="middle" letter-spacing="2">Organic Bloom</text>
+    <text x="0" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#4B6652" text-anchor="middle" letter-spacing="3">NATURALLY BETTER, BEAUTIFULLY YOU</text>
+    <circle cx="0" cy="38" r="2.5" fill="#355239"/>
+  </g>
+
+  <!-- RICE SOAP Title -->
+  <g transform="translate(180, 240)">
+    <text x="0" y="0" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" font-weight="700" fill="#263E2E" letter-spacing="4">RICE SOAP</text>
+    <!-- Divider -->
+    <line x1="0" y1="14" x2="160" y2="14" stroke="#8E7864" stroke-width="1.2"/>
+    <circle x="160" cy="14" r="2" fill="#8E7864"/>
+    <text x="0" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600" fill="#5A4E42">Gentle • Pure • Nourishing</text>
+    <text x="0" y="60" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#756758">
+      Made with the goodness of rice extract
+    </text>
+    <text x="0" y="78" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#756758">
+      for soft, radiant &amp; healthy skin.
+    </text>
+  </g>
+
+  <!-- Wooden Saucer Center Stage -->
+  <ellipse cx="460" cy="620" rx="260" ry="115" fill="url(#riceWoodSaucer)" filter="url(#saucerShadow)"/>
+  <ellipse cx="460" cy="620" rx="230" ry="100" fill="none" stroke="#68421E" stroke-width="2" stroke-opacity="0.3"/>
+
+  <!-- Spilled Raw Rice Grains on Wooden Saucer -->
+  <g fill="#FFFFFA" stroke="#D7CBBA" stroke-width="0.8">
+    <ellipse cx="280" cy="630" rx="9" ry="4" transform="rotate(25 280 630)"/>
+    <ellipse cx="300" cy="640" rx="8" ry="3.8" transform="rotate(-15 300 640)"/>
+    <ellipse cx="315" cy="625" rx="9" ry="4" transform="rotate(40 315 625)"/>
+    <ellipse cx="330" cy="645" rx="8.5" ry="4" transform="rotate(5 330 645)"/>
+    <ellipse cx="350" cy="635" rx="9" ry="3.9" transform="rotate(-30 350 635)"/>
+    <ellipse cx="580" cy="640" rx="9" ry="4" transform="rotate(35 580 640)"/>
+    <ellipse cx="605" cy="630" rx="8" ry="3.7" transform="rotate(-20 605 630)"/>
+    <ellipse cx="625" cy="650" rx="9" ry="4.2" transform="rotate(50 625 650)"/>
+    <ellipse cx="470" cy="675" rx="9" ry="4" transform="rotate(10 470 675)"/>
+    <ellipse cx="495" cy="685" rx="8.5" ry="3.8" transform="rotate(-45 495 685)"/>
+    <ellipse cx="525" cy="670" rx="9" ry="4.1" transform="rotate(20 525 670)"/>
+  </g>
+
+  <!-- White Baby's Breath / Jasmine floral sprigs -->
+  <g stroke="#627E67" stroke-width="1.2" fill="none">
+    <path d="M 620 580 Q 670 540 700 500"/>
+    <path d="M 650 555 Q 690 535 710 525"/>
+    <g fill="#FFFFFF" stroke="#D9D0C3" stroke-width="0.8">
+      <circle cx="700" cy="500" r="6"/>
+      <circle cx="710" cy="525" r="5"/>
+      <circle cx="680" cy="520" r="5.5"/>
+      <circle cx="655" cy="545" r="4.5"/>
+      <circle cx="725" cy="510" r="5"/>
+    </g>
+  </g>
+
+  <!-- The Artisanal Square White Rice Soap Bar with Rounded Corners & Flecks -->
+  <g transform="translate(450, 480)" filter="url(#riceSoapShadow)">
+    <!-- 3D Perspective Body of the Soap Bar -->
+    <!-- Base block shadow & edge -->
+    <rect x="-115" y="-95" width="230" height="210" rx="36" fill="#DDD2C0"/>
+    
+    <!-- Top Face of the Soap Bar with rounded craft bevels -->
+    <rect x="-120" y="-105" width="230" height="210" rx="36" fill="url(#ivorySoap)" stroke="#E8DFD1" stroke-width="2"/>
+    
+    <!-- Handcrafted natural rice bran & oat speckles throughout bar -->
+    <g fill="#7A583A" opacity="0.65">
+      <ellipse cx="-70" cy="-60" rx="3.5" ry="2.2" transform="rotate(20 -70 -60)"/>
+      <ellipse cx="-40" cy="-75" rx="4" ry="2.5" transform="rotate(-35 -40 -75)"/>
+      <ellipse cx="20" cy="-70" rx="3" ry="1.8" transform="rotate(45 20 -70)"/>
+      <ellipse cx="65" cy="-55" rx="4.5" ry="2.5" transform="rotate(10 65 -55)"/>
+      <ellipse cx="-85" cy="-10" rx="4" ry="2.2" transform="rotate(60 -85 -10)"/>
+      <ellipse cx="-30" cy="-15" rx="3.5" ry="2" transform="rotate(-15 -30 -15)"/>
+      <ellipse cx="15" cy="-20" rx="4.2" ry="2.6" transform="rotate(30 15 -20)"/>
+      <ellipse cx="70" cy="-5" rx="3.8" ry="2.1" transform="rotate(-40 70 -5)"/>
+      <ellipse cx="-60" cy="40" rx="4.5" ry="2.8" transform="rotate(15 -60 40)"/>
+      <ellipse cx="-15" cy="45" rx="3.2" ry="1.9" transform="rotate(-25 -15 45)"/>
+      <ellipse cx="40" cy="35" rx="4" ry="2.4" transform="rotate(50 40 35)"/>
+      <ellipse cx="75" cy="50" rx="3.6" ry="2" transform="rotate(-10 75 50)"/>
+      <ellipse cx="-35" cy="75" rx="4.2" ry="2.5" transform="rotate(35 -35 75)"/>
+      <ellipse cx="25" cy="80" rx="3.5" ry="2.2" transform="rotate(-20 25 80)"/>
+    </g>
+
+    <!-- Subtle soft highlight sheen on the curved top edge -->
+    <path d="M -90 -85 Q 0 -95 90 -85" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.8"/>
+  </g>
+
+  <!-- Traditional Ceramic Rice Bowl on Left Bottom Edge -->
+  <g transform="translate(140, 720)">
+    <ellipse cx="0" cy="0" rx="70" ry="35" fill="#8C6339" stroke="#664420" stroke-width="2"/>
+    <!-- Rice mound inside bowl -->
+    <ellipse cx="0" cy="-6" rx="60" ry="26" fill="#FFFFFC"/>
+    <!-- Spilled rice grains around bowl -->
+    <g fill="#FFFFFF" stroke="#DDD2C2" stroke-width="0.7">
+      <ellipse cx="65" cy="15" rx="7" ry="3.2" transform="rotate(20 65 15)"/>
+      <ellipse cx="85" cy="25" rx="6.5" ry="3" transform="rotate(-30 85 25)"/>
+      <ellipse cx="105" cy="12" rx="7.2" ry="3.4" transform="rotate(45 105 12)"/>
+    </g>
+  </g>
+
+  <!-- 4 Quality Badges at Bottom -->
+  <g transform="translate(400, 850)" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#4B4136" text-anchor="middle">
+    <g transform="translate(-250, 0)">
+      <circle cx="0" cy="-14" r="15" fill="#EAE1D3" stroke="#8C7864" stroke-width="1"/>
+      <text x="0" y="-8" font-size="12" fill="#3D5A40">🌿</text>
+      <text x="0" y="14">NATURAL</text>
+      <text x="0" y="27" font-size="9" fill="#756758">INGREDIENTS</text>
+    </g>
+    <g transform="translate(-80, 0)">
+      <circle cx="0" cy="-14" r="15" fill="#EAE1D3" stroke="#8C7864" stroke-width="1"/>
+      <text x="0" y="-8" font-size="12" fill="#3D5A40">🌱</text>
+      <text x="0" y="14">SULFATE &amp; PARABEN</text>
+      <text x="0" y="27" font-size="9" fill="#756758">FREE</text>
+    </g>
+    <g transform="translate(80, 0)">
+      <circle cx="0" cy="-14" r="15" fill="#EAE1D3" stroke="#8C7864" stroke-width="1"/>
+      <text x="0" y="-8" font-size="12" fill="#3D5A40">🐰</text>
+      <text x="0" y="14">CRUELTY</text>
+      <text x="0" y="27" font-size="9" fill="#756758">FREE</text>
+    </g>
+    <g transform="translate(250, 0)">
+      <circle cx="0" cy="-14" r="15" fill="#EAE1D3" stroke="#8C7864" stroke-width="1"/>
+      <text x="0" y="-8" font-size="12" fill="#3D5A40">💧</text>
+      <text x="0" y="14">GENTLE ON</text>
+      <text x="0" y="27" font-size="9" fill="#756758">SKIN</text>
+    </g>
+  </g>
+
+  <!-- Bottom Brand Promise Ribbon -->
+  <g transform="translate(400, 940)">
+    <rect x="-240" y="-20" width="480" height="40" rx="20" fill="#38523C"/>
+    <text x="0" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">
+      PURE • ORGANIC • HANDMADE WITH CARE
+    </text>
+  </g>
+</svg>

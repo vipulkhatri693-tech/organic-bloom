@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <!-- Warm amber terracotta ayurvedic ambiance -->
+    <linearGradient id="ubtanBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBF7F0"/>
+      <stop offset="40%" stop-color="#F5ECE0"/>
+      <stop offset="80%" stop-color="#EBDBC8"/>
+      <stop offset="100%" stop-color="#DFC8B0"/>
+    </linearGradient>
+
+    <!-- Golden Amber Ayurvedic Herbal Soap Gradient -->
+    <linearGradient id="herbalSoapBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BA773C"/>
+      <stop offset="25%" stop-color="#A8652D"/>
+      <stop offset="60%" stop-color="#935422"/>
+      <stop offset="90%" stop-color="#7B4215"/>
+      <stop offset="100%" stop-color="#64340E"/>
+    </linearGradient>
+
+    <radialGradient id="soapLuster" cx="40%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#E2A66C"/>
+      <stop offset="40%" stop-color="#B77338"/>
+      <stop offset="85%" stop-color="#844819"/>
+      <stop offset="100%" stop-color="#5A2E0D"/>
+    </radialGradient>
+
+    <filter id="ubtanSoapShadow" x="-25%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="22" stdDeviation="20" flood-color="#4A280B" flood-opacity="0.38"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="1000" fill="url(#ubtanBg)"/>
+
+  <!-- Botanical Turmeric Leaf & Marigold Accents in Background -->
+  <g opacity="0.15" fill="#A86A2D">
+    <ellipse cx="680" cy="180" rx="90" ry="190" transform="rotate(28 680 180)"/>
+    <ellipse cx="120" cy="220" rx="85" ry="170" transform="rotate(-32 120 220)"/>
+  </g>
+
+  <!-- Top Logo Header -->
+  <g transform="translate(400, 110)">
+    <circle cx="0" cy="0" r="50" fill="#EFE6D5" stroke="#263E2E" stroke-width="2"/>
+    <text x="0" y="-8" font-family="'Cormorant Garamond', Georgia, serif" font-size="20" font-weight="700" fill="#263E2E" text-anchor="middle">OB</text>
+    <text x="0" y="10" font-family="'Cormorant Garamond', Georgia, serif" font-size="11" font-weight="700" fill="#263E2E" text-anchor="middle" letter-spacing="1">ORGANIC BLOOM</text>
+    <text x="0" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="600" fill="#8A5A2B" text-anchor="middle" letter-spacing="1.5">— 18 HERB AYURVEDIC —</text>
+  </g>
+
+  <!-- Main Poster Header -->
+  <text x="400" y="210" font-family="'Cormorant Garamond', Georgia, serif" font-size="36" font-weight="700" fill="#2D2115" text-anchor="middle" letter-spacing="2">BRIDAL UBTAN GLOW SOAP</text>
+  <text x="400" y="240" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600" fill="#9C642B" text-anchor="middle" letter-spacing="3">18 AUTHENTIC AYURVEDIC HERBS • HALDI • CHANDAN • KESAR</text>
+  <text x="400" y="265" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#6E5641" text-anchor="middle">
+    Handcrafted Melt &amp; Pour artisan bar infused with pure turmeric, sandalwood, saffron, and besan.
+  </text>
+
+  <!-- Authentic Handcrafted Soap Bar Block (Matching User's Photo) -->
+  <g transform="translate(400, 560)" filter="url(#ubtanSoapShadow)">
+    <!-- 3D Perspective Body of the Soap Bar -->
+    <!-- Lower shadow block -->
+    <rect x="-150" y="-220" width="300" height="440" rx="20" fill="#4B270B"/>
+    
+    <!-- Main Soap Bar Face with Natural Cold-Process Bevels -->
+    <rect x="-155" y="-230" width="300" height="440" rx="18" fill="url(#soapLuster)" stroke="#C88E52" stroke-width="1.8"/>
+
+    <!-- Visible Herbal Texture: 18-Herb Botanical Flecks, Turmeric Grains & Kesar Specks -->
+    <g opacity="0.85">
+      <!-- Dark herbal specks (Chandan, mulethi, manjistha, neem) -->
+      <g fill="#2A1404">
+        <circle cx="-110" cy="-180" r="3.5"/>
+        <circle cx="-60" cy="-200" r="2.8"/>
+        <circle cx="20" cy="-190" r="4.2"/>
+        <circle cx="85" cy="-170" r="3"/>
+        <circle cx="-130" cy="-120" r="3.2"/>
+        <circle cx="-80" cy="-140" r="4.5"/>
+        <circle cx="-25" cy="-110" r="3.8"/>
+        <circle cx="45" cy="-130" r="2.5"/>
+        <circle cx="110" cy="-100" r="4"/>
+        <circle cx="-95" cy="-40" r="3.2"/>
+        <circle cx="-35" cy="-60" r="4.2"/>
+        <circle cx="25" cy="-35" r="3.5"/>
+        <circle cx="85" cy="-50" r="2.8"/>
+        <circle cx="-120" cy="20" r="3.8"/>
+        <circle cx="-50" cy="40" r="3"/>
+        <circle cx="10" cy="30" r="4.5"/>
+        <circle cx="70" cy="15" r="3.2"/>
+        <circle cx="120" cy="50" r="2.8"/>
+        <circle cx="-90" cy="110" r="4.2"/>
+        <circle cx="-30" cy="95" r="3"/>
+        <circle cx="40" cy="120" r="3.8"/>
+        <circle cx="100" cy="100" r="3.2"/>
+        <circle cx="-110" cy="170" r="3.5"/>
+        <circle cx="-45" cy="180" r="4"/>
+        <circle cx="20" cy="160" r="3"/>
+        <circle cx="80" cy="190" r="3.8"/>
+      </g>
+
+      <!-- Golden Turmeric (Haldi) and Saffron (Kesar) micro-shimmer specks -->
+      <g fill="#FBD368">
+        <circle cx="-80" cy="-160" r="2"/>
+        <circle cx="-20" cy="-170" r="2.2"/>
+        <circle cx="60" cy="-150" r="1.8"/>
+        <circle cx="-100" cy="-90" r="2.5"/>
+        <circle cx="10" cy="-80" r="2"/>
+        <circle cx="90" cy="-80" r="2.2"/>
+        <circle cx="-60" cy="-10" r="2.4"/>
+        <circle cx="50" cy="-10" r="2"/>
+        <circle cx="-80" cy="60" r="2.2"/>
+        <circle cx="30" cy="70" r="2"/>
+        <circle cx="-60" cy="140" r="2.4"/>
+        <circle cx="60" cy="150" r="2"/>
+      </g>
+
+      <!-- Saffron threads (delicate red-orange kesar filaments) -->
+      <g stroke="#C63D17" stroke-width="1.2" fill="none" opacity="0.8">
+        <path d="M -40 -130 Q -35 -125 -38 -118"/>
+        <path d="M 50 -70 Q 55 -65 52 -58"/>
+        <path d="M -70 40 Q -65 45 -68 52"/>
+        <path d="M 15 100 Q 20 105 18 112"/>
+      </g>
+    </g>
+
+    <!-- Authentic surface shine highlight on left beveled edge -->
+    <path d="M -145 -215 L -145 215" stroke="#F5C088" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- Price Badge: ONLY ₹199/- (₹249 MRP) -->
+  <g transform="translate(100, 680)">
+    <rect x="0" y="0" width="160" height="95" rx="8" fill="#3D2008" stroke="#D9A84E" stroke-width="2"/>
+    <text x="80" y="28" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#E5BD68" text-anchor="middle" letter-spacing="2">SPECIAL PRICE</text>
+    <text x="80" y="74" font-family="'Cormorant Garamond', Georgia, serif" font-size="44" font-weight="700" fill="#FFFFFF" text-anchor="middle">₹199/-</text>
+  </g>
+
+  <!-- Authentic Handmade In Ahmedabad Guarantee Badge -->
+  <g transform="translate(680, 680)">
+    <circle cx="0" cy="40" r="50" fill="#EFE6D5" stroke="#9E6835" stroke-width="2"/>
+    <text x="0" y="28" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#3D2008" text-anchor="middle">100% REAL</text>
+    <text x="0" y="44" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" font-weight="700" fill="#9E6835" text-anchor="middle">HANDMADE</text>
+    <text x="0" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" fill="#3D2008" text-anchor="middle">AHMEDABAD</text>
+  </g>
+
+  <!-- 4 Quality Badges at Bottom -->
+  <g transform="translate(400, 870)" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#4B3B2B" text-anchor="middle">
+    <g transform="translate(-250, 0)">
+      <circle cx="0" cy="-14" r="15" fill="#EAE1D3" stroke="#8C6A48" stroke-width="1"/>
+      <text x="0" y="-8" font-size="12">✨</text>
+      <text x="0" y="14">BRIDAL GLOW</text>
+      <text x="0" y="27" font-size="9" fill="#756250">DE-TAN CARE</text>
+    </g>
+    <g transform="translate(-80, 0)">
+      <circle cx="0" cy="-14" r="15" fill="#EAE1D3" stroke="#8C6A48" stroke-width="1"/>
+      <text x="0" y="-8" font-size="12">🌿</text>
+      <text x="0" y="14">18 AYURVEDIC</text>
+      <text x="0" y="27" font-size="9" fill="#756250">HERBS</text>
+    </g>
+    <g transform="translate(80, 0)">
+      <circle cx="0" cy="-14" r="15" fill="#EAE1D3" stroke="#8C6A48" stroke-width="1"/>
+      <text x="0" y="-8" font-size="12">🌱</text>
+      <text x="0" y="14">CHEMICAL</text>
+      <text x="0" y="27" font-size="9" fill="#756250">FREE</text>
+    </g>
+    <g transform="translate(250, 0)">
+      <circle cx="0" cy="-14" r="15" fill="#EAE1D3" stroke="#8C6A48" stroke-width="1"/>
+      <text x="0" y="-8" font-size="12">💧</text>
+      <text x="0" y="14">COLD PROCESS</text>
+      <text x="0" y="27" font-size="9" fill="#756250">4-WEEK CURED</text>
+    </g>
+  </g>
+
+  <!-- Bottom Promise Ribbon -->
+  <g transform="translate(400, 945)">
+    <rect x="-240" y="-20" width="480" height="40" rx="20" fill="#9E6835"/>
+    <text x="0" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">
+      HALDI • CHANDAN • KESAR • 100% PURE &amp; NATURAL
+    </text>
+  </g>
+</svg>

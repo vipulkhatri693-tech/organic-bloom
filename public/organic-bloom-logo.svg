@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="kraftBg" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#F7F1E6"/>
+      <stop offset="70%" stop-color="#EFE6D5"/>
+      <stop offset="100%" stop-color="#E5D9C4"/>
+    </radialGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1B2E1E" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Circular Kraft Seal Background -->
+  <circle cx="200" cy="200" r="190" fill="url(#kraftBg)" stroke="#263E2E" stroke-width="4" filter="url(#subtleShadow)"/>
+  
+  <!-- Concentric Inner Delicate Ring -->
+  <circle cx="200" cy="200" r="176" fill="none" stroke="#263E2E" stroke-width="1.2" stroke-opacity="0.85"/>
+  <circle cx="200" cy="200" r="172" fill="none" stroke="#263E2E" stroke-width="0.5" stroke-dasharray="2 3" stroke-opacity="0.5"/>
+
+  <!-- Top Botanical Branch Flourish (intertwined with monogram) -->
+  <g id="botanical-sprig" stroke="#263E2E" fill="#3D5A44" stroke-linecap="round">
+    <!-- Main winding stem -->
+    <path d="M 160 170 C 150 140, 155 105, 175 80 C 185 68, 192 60, 190 52" fill="none" stroke-width="2.2"/>
+    <path d="M 175 80 C 190 75, 205 78, 215 88" fill="none" stroke-width="1.6"/>
+    
+    <!-- Leaves along the stem -->
+    <!-- Top leaf pair -->
+    <path d="M 190 52 C 185 45, 185 36, 192 34 C 197 38, 198 46, 190 52 Z"/>
+    <path d="M 190 52 C 198 50, 208 52, 210 58 C 205 62, 196 60, 190 52 Z"/>
+
+    <!-- Left side leaves -->
+    <path d="M 178 75 C 165 72, 155 78, 152 86 C 160 88, 172 84, 178 75 Z"/>
+    <path d="M 168 100 C 152 100, 142 108, 140 118 C 150 119, 162 112, 168 100 Z"/>
+    <path d="M 158 130 C 144 133, 138 142, 137 151 C 147 151, 155 143, 158 130 Z"/>
+
+    <!-- Right side leaves -->
+    <path d="M 182 85 C 192 82, 205 85, 210 93 C 203 97, 190 94, 182 85 Z"/>
+    <path d="M 172 115 C 184 112, 196 116, 200 125 C 192 128, 180 124, 172 115 Z"/>
+    <path d="M 162 145 C 172 146, 182 153, 184 162 C 175 163, 167 156, 162 145 Z"/>
+
+    <!-- Small botanical berries / buds -->
+    <circle cx="163" cy="74" r="2.8" fill="#C4883B" stroke="none"/>
+    <circle cx="147" cy="98" r="2.5" fill="#C4883B" stroke="none"/>
+    <circle cx="206" cy="80" r="2.5" fill="#C4883B" stroke="none"/>
+    <circle cx="198" cy="110" r="2.8" fill="#C4883B" stroke="none"/>
+  </g>
+
+  <!-- Botanical Monogram: OB -->
+  <!-- Letter O -->
+  <g id="letter-O" fill="none" stroke="#263E2E" stroke-linecap="butt">
+    <!-- Outer oval curve of O -->
+    <path d="M 180 110 C 140 110, 122 140, 122 175 C 122 210, 142 240, 180 240 C 200 240, 216 226, 222 208" stroke-width="9" stroke-linecap="round"/>
+    <!-- Inner contrast cut of O -->
+    <ellipse cx="170" cy="175" rx="30" ry="46" fill="#F0E7D6" stroke="#263E2E" stroke-width="2.5"/>
+  </g>
+
+  <!-- Letter B intertwined -->
+  <g id="letter-B" fill="#263E2E">
+    <!-- Vertical stem of B with classic serifs -->
+    <rect x="210" y="116" width="7.5" height="122" rx="1"/>
+    <!-- Top serif -->
+    <path d="M 200 116 L 226 116 L 226 121 L 217.5 121 L 217.5 232 L 228 232 L 228 238 L 198 238 L 198 232 L 210 232 L 210 121 L 200 121 Z"/>
+    
+    <!-- Top bowl of B -->
+    <path d="M 217 117 C 248 117, 266 130, 266 148 C 266 165, 248 175, 225 175 L 217 175 Z M 225 167 C 243 167, 256 160, 256 148 C 256 135, 243 125, 225 125 L 217.5 125 L 217.5 167 Z"/>
+    
+    <!-- Bottom bowl of B (larger) -->
+    <path d="M 222 172 C 253 172, 276 186, 276 206 C 276 227, 252 238, 220 238 L 210 238 L 210 230 L 222 230 C 248 230, 265 221, 265 206 C 265 190, 247 180, 222 180 L 217.5 180 L 217.5 172 Z"/>
+  </g>
+
+  <!-- Brand Typography: ORGANIC BLOOM -->
+  <!-- (Cleanly centered, high contrast display serif) -->
+  <text x="200" y="284" 
+        font-family="'Cormorant Garamond', 'Cinzel', 'Georgia', serif" 
+        font-size="34" 
+        font-weight="700" 
+        fill="#263E2E" 
+        text-anchor="middle" 
+        letter-spacing="1.5">Organic Bloom</text>
+
+  <!-- Thin ornamental dividing line -->
+  <path d="M 120 298 L 175 298 M 225 298 L 280 298" stroke="#263E2E" stroke-width="1" stroke-linecap="round"/>
+  <circle cx="175" cy="298" r="1.5" fill="#263E2E"/>
+  <circle cx="225" cy="298" r="1.5" fill="#263E2E"/>
+
+  <!-- Symmetrical Bottom Floral / Lotus Ornament (matching user's exact sticker flourish) -->
+  <g id="bottom-flourish" transform="translate(200, 326)" fill="#263E2E">
+    <!-- Center lotus petal -->
+    <path d="M 0 -16 C 6 -10, 8 -3, 0 8 C -8 -3, -6 -10, 0 -16 Z"/>
+    <!-- Left petal -->
+    <path d="M -3 0 C -12 -5, -20 -4, -24 2 C -20 8, -12 7, -3 0 Z"/>
+    <path d="M -4 3 C -11 2, -18 9, -19 16 C -13 16, -7 11, -4 3 Z"/>
+    <!-- Right petal -->
+    <path d="M 3 0 C 12 -5, 20 -4, 24 2 C 20 8, 12 7, 3 0 Z"/>
+    <path d="M 4 3 C 11 2, 18 9, 19 16 C 13 16, 7 11, 4 3 Z"/>
+    <!-- Bottom dot flourish -->
+    <circle cx="0" cy="14" r="2.2" fill="#263E2E"/>
+    <circle cx="-14" cy="12" r="1.4" fill="#263E2E"/>
+    <circle cx="14" cy="12" r="1.4" fill="#263E2E"/>
+  </g>
+</svg>

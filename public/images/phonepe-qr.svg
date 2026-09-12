@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 620" width="100%" height="100%">
+  <defs>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Dark Slate Background matching user's PhonePe Screen -->
+  <rect width="420" height="620" rx="24" fill="#121214" filter="url(#cardShadow)"/>
+
+  <!-- Top Header Bar -->
+  <g transform="translate(24, 28)">
+    <text x="0" y="0" font-family="sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF">Receive Money</text>
+    <text x="0" y="20" font-family="sans-serif" font-size="11" fill="#9E9EA5">From any UPI app</text>
+    
+    <!-- Partner logos pills -->
+    <g transform="translate(110, 8)">
+      <rect x="0" y="0" width="62" height="18" rx="9" fill="#5F259F"/>
+      <text x="31" y="12.5" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#FFFFFF">PhonePe</text>
+
+      <rect x="68" y="0" width="50" height="18" rx="9" fill="#1B365D"/>
+      <text x="93" y="12.5" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#FFFFFF">BHIM</text>
+
+      <rect x="124" y="0" width="46" height="18" rx="9" fill="#333336"/>
+      <text x="147" y="12.5" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#FFFFFF">GPay</text>
+
+      <rect x="176" y="0" width="46" height="18" rx="9" fill="#002E6E"/>
+      <text x="199" y="12.5" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#00BAF2">Paytm</text>
+    </g>
+  </g>
+
+  <!-- Bank Badge -->
+  <g transform="translate(80, 78)">
+    <rect width="260" height="44" rx="10" fill="#1E1E22" stroke="#2C2C32" stroke-width="1"/>
+    
+    <!-- HDFC logo mark -->
+    <rect x="14" y="11" width="22" height="22" rx="3" fill="#ED232A"/>
+    <rect x="19" y="16" width="12" height="12" fill="#004C8F"/>
+    <rect x="22" y="19" width="6" height="6" fill="#FFFFFF"/>
+    
+    <text x="46" y="27" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">HDFC Bank - 6686</text>
+  </g>
+
+  <!-- QR Code White Container -->
+  <g transform="translate(70, 140)">
+    <rect width="280" height="280" rx="16" fill="#FFFFFF"/>
+    <g transform="translate(15, 15) scale(0.685)">
+      <path fill="#ffffff" d="M0 0h43v43H0z"/><path stroke="#000000" d="M1 1.5h7m4 0h1m3 0h4m2 0h2m1 0h1m3 0h3m3 0h7M1 2.5h1m5 0h1m2 0h3m4 0h1m1 0h4m1 0h2m6 0h1m2 0h1m5 0h1M1 3.5h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h2m4 0h1m3 0h1m4 0h1m5 0h1m1 0h3m1 0h1M1 4.5h1m1 0h3m1 0h1m1 0h1m1 0h1m3 0h2m7 0h1m5 0h3m2 0h1m1 0h3m1 0h1M1 5.5h1m1 0h3m1 0h1m2 0h3m3 0h5m1 0h2m1 0h1m1 0h1m1 0h1m2 0h1m2 0h1m1 0h3m1 0h1M1 6.5h1m5 0h1m3 0h6m1 0h1m2 0h1m2 0h2m1 0h1m1 0h3m1 0h1m1 0h1m5 0h1M1 7.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M12 8.5h1m1 0h3m3 0h3m2 0h3m4 0h2M4 9.5h2m1 0h2m1 0h2m1 0h1m3 0h3m1 0h3m1 0h7m1 0h1m4 0h2M2 10.5h3m1 0h1m2 0h3m1 0h3m5 0h1m1 0h1m3 0h2m3 0h1m1 0h1m2 0h3M4 11.5h4m2 0h2m1 0h1m1 0h3m1 0h1m1 0h3m1 0h6m3 0h1m1 0h1m1 0h2M4 12.5h1m6 0h1m1 0h2m3 0h1m1 0h1m1 0h1m2 0h1m1 0h1m2 0h2m6 0h1m1 0h1M1 13.5h1m1 0h1m1 0h1m1 0h5m3 0h1m1 0h11m1 0h1m2 0h1m2 0h2m3 0h1M1 14.5h2m1 0h1m3 0h1m1 0h3m1 0h7m1 0h2m1 0h1m1 0h1m2 0h2m3 0h5m1 0h1M1 15.5h3m1 0h6m2 0h1m1 0h1m1 0h2m1 0h2m1 0h2m2 0h3m1 0h3m2 0h2m3 0h1M1 16.5h1m2 0h2m3 0h1m1 0h1m3 0h1m1 0h2m9 0h2m2 0h3m3 0h2M1 17.5h2m3 0h2m1 0h6m2 0h1m1 0h1m1 0h9m3 0h2m1 0h1m1 0h1m1 0h1M2 18.5h2m4 0h2m3 0h4m2 0h1m5 0h1m2 0h2m2 0h2m2 0h4M1 19.5h1m1 0h1m1 0h1m1 0h2m3 0h2m3 0h1m1 0h1m1 0h1m1 0h4m1 0h1m1 0h1m1 0h1m3 0h1m1 0h2m1 0h1M1 20.5h2m1 0h3m2 0h3m3 0h2m2 0h1m1 0h3m1 0h2m2 0h1m2 0h2m1 0h1m2 0h2M3 21.5h3m1 0h1m2 0h4m3 0h4m4 0h1m2 0h2m5 0h2m1 0h3M1 22.5h1m1 0h3m3 0h1m1 0h7m1 0h4m1 0h1m1 0h1m3 0h3m3 0h2m2 0h1M1 23.5h2m1 0h2m1 0h1m1 0h1m3 0h1m1 0h3m1 0h2m1 0h3m1 0h1m1 0h2m5 0h3m1 0h1M1 24.5h2m1 0h1m6 0h1m2 0h9m2 0h1m2 0h3m1 0h1m1 0h2m1 0h2m1 0h2M1 25.5h5m1 0h2m1 0h2m1 0h2m4 0h1m1 0h1m3 0h2m1 0h1m4 0h1m1 0h2m1 0h1m1 0h1M1 26.5h1m1 0h1m5 0h2m4 0h4m4 0h1m1 0h4m7 0h4M4 27.5h4m2 0h1m3 0h4m1 0h2m4 0h2m1 0h1m2 0h2m1 0h1m2 0h2m2 0h1M1 28.5h1m1 0h3m3 0h1m6 0h1m4 0h2m1 0h2m1 0h1m1 0h1m3 0h3m1 0h3m1 0h1M1 29.5h1m2 0h2m1 0h2m4 0h4m3 0h2m1 0h2m1 0h1m1 0h2m1 0h1m1 0h2m1 0h1m3 0h1M1 30.5h2m8 0h1m1 0h1m4 0h5m2 0h2m3 0h1m1 0h2m3 0h2M1 31.5h2m1 0h2m1 0h6m3 0h1m1 0h1m3 0h4m2 0h3m1 0h2m2 0h1m1 0h2m1 0h1M1 32.5h6m3 0h1m3 0h1m1 0h1m1 0h2m3 0h2m1 0h4m1 0h1m2 0h2m1 0h1m1 0h2M1 33.5h3m1 0h1m1 0h2m3 0h1m2 0h1m2 0h2m1 0h1m1 0h1m3 0h1m1 0h2m1 0h6m1 0h2M9 34.5h1m1 0h2m1 0h4m1 0h2m2 0h2m3 0h4m1 0h1m3 0h3M1 35.5h7m1 0h2m1 0h1m2 0h1m1 0h1m2 0h1m2 0h3m1 0h7m1 0h1m1 0h1M1 36.5h1m5 0h1m2 0h2m1 0h8m4 0h1m3 0h2m1 0h2m3 0h2m1 0h1M1 37.5h1m1 0h3m1 0h1m1 0h2m1 0h2m1 0h3m5 0h1m1 0h4m1 0h1m1 0h6m2 0h1M1 38.5h1m1 0h3m1 0h1m1 0h1m2 0h3m1 0h6m3 0h1m2 0h1m2 0h2m1 0h1m1 0h1m1 0h4M1 39.5h1m1 0h3m1 0h1m2 0h4m2 0h1m1 0h1m1 0h2m4 0h1m1 0h2m1 0h1m1 0h1m3 0h1m2 0h2M1 40.5h1m5 0h1m3 0h2m1 0h5m2 0h2m3 0h2m1 0h1m1 0h1m4 0h4m1 0h1M1 41.5h7m2 0h2m2 0h7m1 0h3m2 0h2m3 0h2m2 0h1m1 0h1"/></svg>
+
+    </g>
+    
+    <!-- PhonePe 'पे' Center Badge -->
+    <circle cx="140" cy="140" r="26" fill="#5F259F" stroke="#FFFFFF" stroke-width="3.5"/>
+    <text x="140" y="149" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="900" fill="#FFFFFF">पे</text>
+  </g>
+
+  <!-- Action buttons: Share QR & Download QR -->
+  <g transform="translate(24, 442)">
+    <text x="70" y="0" font-family="sans-serif" font-size="12" font-weight="bold" fill="#9D65E0">SHARE QR</text>
+    <text x="230" y="0" font-family="sans-serif" font-size="12" font-weight="bold" fill="#9D65E0">DOWNLOAD QR</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="24" y1="462" x2="396" y2="462" stroke="#2A2A30" stroke-width="1"/>
+
+  <!-- UPI IDs Section -->
+  <g transform="translate(24, 482)">
+    <text x="0" y="0" font-family="sans-serif" font-size="12" font-weight="bold" fill="#A5A5AF">UPI IDs</text>
+    <text x="330" y="0" font-family="sans-serif" font-size="11" font-weight="bold" fill="#9D65E0">MANAGE</text>
+
+    <!-- UPI ID 1 -->
+    <g transform="translate(0, 16)">
+      <text x="0" y="12" font-family="monospace" font-size="13" font-weight="bold" fill="#FFFFFF">khatrinikita03@ybl</text>
+      <rect x="336" y="0" width="18" height="18" rx="3" fill="none" stroke="#8E8E98" stroke-width="1.5"/>
+    </g>
+
+    <!-- Divider -->
+    <line x1="0" y1="38" x2="372" y2="38" stroke="#222228" stroke-width="1"/>
+
+    <!-- UPI ID 2 -->
+    <g transform="translate(0, 48)">
+      <text x="0" y="12" font-family="monospace" font-size="12" fill="#B0B0B8">khatrinikita03@ibl</text>
+      <rect x="336" y="0" width="18" height="18" rx="3" fill="none" stroke="#6E6E78" stroke-width="1.5"/>
+    </g>
+
+    <!-- Divider -->
+    <line x1="0" y1="70" x2="372" y2="70" stroke="#222228" stroke-width="1"/>
+
+    <!-- UPI ID 3 -->
+    <g transform="translate(0, 80)">
+      <text x="0" y="12" font-family="monospace" font-size="12" fill="#B0B0B8">khatrinikita03@axl</text>
+      <rect x="336" y="0" width="18" height="18" rx="3" fill="none" stroke="#6E6E78" stroke-width="1.5"/>
+    </g>
+  </g>
+
+  <!-- Powered by UPI Footer -->
+  <g transform="translate(160, 598)">
+    <text x="50" y="0" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#757580">POWERED BY</text>
+    <text x="50" y="12" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" letter-spacing="1">UPI ▶</text>
+  </g>
+</svg>
