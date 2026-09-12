@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="~{fragments/layout :: head('Your Bag — Organic Bloom')}"></head>
+<body>
+<div th:replace="~{fragments/layout :: navbar}"></div>
+
+<main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <h1 class="font-display text-3xl sm:text-4xl font-bold text-[#1C2C20] mb-8">Your Shopping Bag</h1>
+
+    <div th:if="${flash}" class="mb-6 rounded-xl bg-[#E4ECE4] border border-[#B9CBB9] text-[#263E2E] text-sm px-4 py-3" th:text="${flash}"></div>
+
+    <!-- Empty state -->
+    <div th:if="${items.isEmpty()}" class="text-center py-20 bg-[#FAF7F2] rounded-2xl border border-[#E8DFD3]">
+        <p class="font-display text-2xl text-[#2C2926]">Your bag is empty</p>
+        <p class="text-sm text-[#6C655A] mt-2">Discover our handcrafted botanical soaps and combos.</p>
+        <a href="/#collection" class="inline-block mt-5 px-6 py-3 bg-[#263E2E] text-white rounded-full text-sm font-semibold hover:bg-[#1A2D20] transition-colors">Shop the Collection</a>
+    </div>
+
+    <div th:unless="${items.isEmpty()}" class="grid lg:grid-cols-3 gap-8">
+        <!-- Items -->
+        <div class="lg:col-span-2 space-y-4">
+            <div th:each="item : ${items}" class="flex gap-4 bg-[#FAF7F2] rounded-2xl border border-[#E6DDCF] p-4 shadow-xs">
+                <a th:href="'/product/' + ${item.product.id}" class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl bg-[#EFE9DF] overflow-hidden shrink-0">
+                    <img th:src="${item.product.image}" th:alt="${item.product.name}" class="w-full h-full object-cover"/>
+                </a>
+                <div class="flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-start justify-between gap-3">
+                            <a th:href="'/product/' + ${item.product.id}">
+                                <h3 class="font-display text-lg font-bold text-[#1C2C20] leading-snug" th:text="${item.product.name}">Name</h3>
+                            </a>
+                            <form th:action="@{/cart/remove}" method="post">
+                                <input type="hidden" name="productId" th:value="${item.product.id}"/>
+                                <button type="submit" class="text-xs text-[#9B4A3A] hover:text-[#7A2E1F] font-semibold">Remove</button>
+                            </form>
+                        </div>
+                        <p class="text-xs text-[#6B6459] mt-0.5 line-clamp-1" th:text="${item.product.subtitle}">subtitle</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-3">
+                        <form th:action="@{/cart/update}" method="post" class="flex items-center gap-2">
+                            <input type="hidden" name="productId" th:value="${item.product.id}"/>
+                            <div class="flex items-center border border-[#DDD3C2] rounded-full overflow-hidden">
+                                <button type="submit" name="quantity" th:value="${item.quantity - 1}" class="px-3 py-1.5 text-[#5A554E] hover:bg-[#F2ECE2]">−</button>
+                                <span class="w-10 text-center text-sm font-semibold" th:text="${item.quantity}">1</span>
+                                <button type="submit" name="quantity" th:value="${item.quantity + 1}" class="px-3 py-1.5 text-[#5A554E] hover:bg-[#F2ECE2]">+</button>
+                            </div>
+                        </form>
+                        <div class="text-right">
+                            <span class="font-display text-lg font-bold text-[#1C2C20]" th:text="'₹' + ${item.lineTotal}">₹99</span>
+                            <span class="block text-[10px] text-[#7A7368]" th:text="'₹' + ${item.product.price} + ' each'">₹99 each</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <aside class="bg-[#F5F0EA] rounded-2xl border border-[#E8DFD3] p-6 h-fit sticky top-28">
+            <h2 class="font-display text-xl font-semibold text-[#213527] mb-4">Order Summary</h2>
+            <div class="space-y-2.5 text-sm text-[#5C554C]">
+                <div class="flex justify-between"><span>Subtotal</span><span class="font-semibold text-[#1C2C20]" th:text="'₹' + ${subtotal}">₹0</span></div>
+                <div class="flex justify-between">
+                    <span>Shipping</span>
+                    <span class="font-semibold" th:classappend="${shipping == 0} ? 'text-[#528C5F]' : 'text-[#1C2C20]'"
+                          th:text="${shipping == 0} ? 'FREE' : '₹' + ${shipping}">FREE</span>
+                </div>
+                <p th:if="${shipping > 0}" class="text-xs text-[#8B5A2B]"
+                   th:text="'Add ₹' + (${freeDeliveryThreshold} - ${subtotal}) + ' more for free delivery.'">free delivery hint</p>
+                <div class="flex justify-between pt-3 border-t border-[#E0D6C7] text-base">
+                    <span class="font-semibold text-[#1C2C20]">Total</span>
+                    <span class="font-display text-xl font-bold text-[#1C2C20]" th:text="'₹' + ${total}">₹0</span>
+                </div>
+            </div>
+            <a href="/checkout" class="block text-center mt-5 px-6 py-3.5 rounded-full bg-[#263E2E] text-white font-semibold text-sm hover:bg-[#1A2D20] transition-colors">
+                Proceed to Checkout
+            </a>
+            <a href="/#collection" class="block text-center mt-3 text-xs text-[#5C554C] hover:text-[#263E2E] font-medium">Continue Shopping</a>
+        </aside>
+    </div>
+</main>
+
+<div th:replace="~{fragments/layout :: footer}"></div>
+</body>
+</html>

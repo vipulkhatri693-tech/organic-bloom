@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="~{fragments/layout :: head(${product.name} + ' — Organic Bloom')}"></head>
+<body>
+<div th:replace="~{fragments/layout :: navbar}"></div>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <nav class="text-xs text-[#7A7368] mb-6">
+        <a href="/" class="hover:text-[#263E2E]">Home</a>
+        <span class="mx-1.5">/</span>
+        <a href="/#collection" class="hover:text-[#263E2E]">Collection</a>
+        <span class="mx-1.5">/</span>
+        <span class="text-[#2C2926] font-medium" th:text="${product.name}">Product</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-2 gap-10">
+        <!-- Gallery -->
+        <div class="space-y-4">
+            <div class="aspect-square rounded-2xl bg-[#EFE9DF] overflow-hidden border border-[#E6DDCF]">
+                <img id="main-image" th:src="${product.image}" th:alt="${product.name}" class="w-full h-full object-cover"/>
+            </div>
+            <div class="flex gap-3">
+                <button type="button" onclick="document.getElementById('main-image').src=this.querySelector('img').src"
+                        class="w-24 h-24 rounded-xl bg-[#EFE9DF] overflow-hidden border border-[#E6DDCF] hover:border-[#263E2E] transition-colors">
+                    <img th:src="${product.image}" alt="Poster view" class="w-full h-full object-cover"/>
+                </button>
+                <button th:if="${product.secondaryImage}" type="button"
+                        onclick="document.getElementById('main-image').src=this.querySelector('img').src"
+                        class="w-24 h-24 rounded-xl bg-[#EFE9DF] overflow-hidden border border-[#E6DDCF] hover:border-[#263E2E] transition-colors">
+                    <img th:src="${product.secondaryImage}" alt="Soap close-up" class="w-full h-full object-cover"/>
+                </button>
+            </div>
+        </div>
+
+        <!-- Info -->
+        <div>
+            <div class="flex items-center gap-2 mb-2">
+                <span th:if="${product.badge}" class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-[#263E2E] text-[#FAF7F2]" th:text="${product.badge}">Badge</span>
+                <span class="text-[11px] text-[#263E2E] bg-[#E8EFE8] px-2 py-0.5 rounded font-semibold" th:text="${product.primaryActive}">Active</span>
+            </div>
+            <h1 class="font-display text-4xl font-bold text-[#1C2C20] leading-tight" th:text="${product.name}">Name</h1>
+            <p class="text-sm text-[#6B6459] mt-2 font-serif-sub" th:text="${product.subtitle}">subtitle</p>
+
+            <div class="flex items-center gap-2 mt-3 text-sm text-[#6B645A]">
+                <span class="text-[#C48039]">★★★★★</span>
+                <span class="font-bold text-[#2C2926]" th:text="${product.rating}">5.0</span>
+                <span th:text="'(' + ${product.reviewCount} + ' reviews)'">(5)</span>
+            </div>
+
+            <div class="flex items-baseline gap-3 mt-5">
+                <span class="font-display text-4xl font-bold text-[#1C2C20]" th:text="'₹' + ${product.price}">₹99</span>
+                <span th:if="${product.originalPrice}" class="text-lg text-[#8A8277] line-through" th:text="'₹' + ${product.originalPrice}">₹149</span>
+                <span th:if="${product.savings > 0}" class="text-sm text-white bg-[#263E2E] px-2.5 py-1 rounded-full font-bold" th:text="'Save ₹' + ${product.savings}">Save</span>
+            </div>
+
+            <p class="text-sm text-[#524B41] leading-relaxed mt-5" th:text="${product.description}">desc</p>
+
+            <div class="flex flex-wrap gap-2 mt-5">
+                <span th:each="herb : ${product.keyBotanicals}" class="text-xs font-medium bg-[#F1EBE0] text-[#554E45] px-3 py-1 rounded-full" th:text="${herb}">herb</span>
+            </div>
+
+            <form th:action="@{/cart/add}" method="post" class="flex items-center gap-3 mt-7">
+                <input type="hidden" name="productId" th:value="${product.id}"/>
+                <input type="hidden" name="redirect" value="/cart"/>
+                <div class="flex items-center border border-[#DDD3C2] rounded-full overflow-hidden">
+                    <button type="button" onclick="var q=this.nextElementSibling; q.value=Math.max(1,parseInt(q.value)-1)" class="px-4 py-3 text-lg text-[#5A554E] hover:bg-[#F2ECE2]">−</button>
+                    <input name="quantity" type="number" min="1" value="1" class="w-14 text-center border-0 focus:outline-none bg-transparent font-semibold"/>
+                    <button type="button" onclick="var q=this.previousElementSibling; q.value=parseInt(q.value)+1" class="px-4 py-3 text-lg text-[#5A554E] hover:bg-[#F2ECE2]">+</button>
+                </div>
+                <button type="submit" class="flex-1 px-6 py-3.5 rounded-full bg-[#263E2E] text-[#FAF7F2] font-semibold text-sm hover:bg-[#1A2D20] transition-colors shadow-xs">
+                    Add to Bag
+                </button>
+            </form>
+
+            <div class="mt-6 space-y-2 text-xs text-[#5C554C] bg-[#F5F0EA] rounded-xl p-4 border border-[#E8DFD3]">
+                <div>✓ 100% Sulfate &amp; Paraben Free • Melt &amp; Pour handcrafted</div>
+                <div>✓ Pan-India courier • COD, PhonePe/UPI &amp; GPay accepted</div>
+                <div th:text="'✓ Free delivery on orders above ₹' + ${freeDeliveryThreshold}">✓ Free delivery</div>
+            </div>
+
+            <!-- Benefits -->
+            <div class="mt-8">
+                <h2 class="font-display text-xl font-semibold text-[#213527] mb-3">Key Benefits</h2>
+                <ul class="space-y-2">
+                    <li th:each="benefit : ${product.benefits}" class="flex items-start gap-2 text-sm text-[#524B41]">
+                        <span class="text-[#263E2E] mt-0.5">✦</span><span th:text="${benefit}">benefit</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Ingredients -->
+            <div class="mt-8">
+                <h2 class="font-display text-xl font-semibold text-[#213527] mb-3">Full Ingredients</h2>
+                <p class="text-sm text-[#5B544B] leading-relaxed" th:text="${#strings.listJoin(product.fullIngredients, ', ')}">ingredients</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related -->
+    <section class="mt-16 pt-10 border-t border-[#E8DFD3]">
+        <h2 class="font-display text-2xl font-semibold text-[#1C2C20] mb-6">You May Also Love</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <a th:each="rel : ${related}" th:href="'/product/' + ${rel.id}"
+               class="group bg-[#FAF7F2] rounded-2xl overflow-hidden border border-[#E6DDCF] shadow-xs hover:shadow-lg transition-all">
+                <div class="aspect-[4/3] bg-[#EFE9DF] overflow-hidden">
+                    <img th:src="${rel.image}" th:alt="${rel.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-display text-lg font-bold text-[#1C2C20]" th:text="${rel.name}">Name</h3>
+                    <p class="text-xs text-[#6B6459] mt-1 line-clamp-1" th:text="${rel.subtitle}">subtitle</p>
+                    <span class="font-display text-xl font-bold text-[#1C2C20] mt-2 block" th:text="'₹' + ${rel.price}">₹99</span>
+                </div>
+            </a>
+        </div>
+    </section>
+</main>
+
+<div th:replace="~{fragments/layout :: footer}"></div>
+</body>
+</html>

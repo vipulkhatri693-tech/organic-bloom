@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /rev53st-host-portal
-
-Sitemap: https://orgianicbloom.netlify.app/sitemap.xml

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="~{fragments/layout :: head('Order Confirmed — Organic Bloom')}"></head>
+<body>
+<div th:replace="~{fragments/layout :: navbar}"></div>
+
+<main class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+    <div class="w-16 h-16 mx-auto rounded-full bg-[#E8EFE8] border border-[#B9CBB9] flex items-center justify-center text-[#263E2E] text-3xl font-display">✓</div>
+    <h1 class="font-display text-3xl sm:text-4xl font-bold text-[#1C2C20] mt-5">Thank you, <span th:text="${fullName}">Friend</span>!</h1>
+    <p class="text-sm text-[#5C554C] mt-2">Your handcrafted soaps are on their way. A confirmation will be shared on your mobile number.</p>
+
+    <div class="mt-8 bg-[#FAF7F2] rounded-2xl border border-[#E6DDCF] p-6 text-left shadow-xs">
+        <div class="flex items-center justify-between pb-4 border-b border-[#E8DFD3]">
+            <span class="text-xs uppercase tracking-widest text-[#8B5A2B] font-bold">Order ID</span>
+            <span class="font-display text-lg font-bold text-[#1C2C20]" th:text="${orderId}">OB-000000</span>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 py-4 text-sm border-b border-[#E8DFD3]">
+            <div>
+                <p class="text-xs text-[#8B5A2B] font-semibold uppercase">Deliver To</p>
+                <p class="text-[#2C2926] mt-1" th:text="${fullName}">Name</p>
+                <p class="text-[#5C554C]" th:text="${address}">Address</p>
+                <p class="text-[#5C554C]" th:text="${city} + ' - ' + ${pincode}">City</p>
+                <p class="text-[#5C554C]" th:text="'Mobile: ' + ${phone}">Phone</p>
+            </div>
+            <div class="sm:text-right">
+                <p class="text-xs text-[#8B5A2B] font-semibold uppercase">Payment</p>
+                <p class="text-[#2C2926] mt-1" th:text="${payment}">COD</p>
+                <p class="text-xs text-[#8B5A2B] font-semibold uppercase mt-3" th:text="${itemCount} + ' item(s)'">items</p>
+                <p class="font-display text-2xl font-bold text-[#1C2C20] mt-1" th:text="'₹' + ${total}">₹0</p>
+            </div>
+        </div>
+        <div class="pt-4 space-y-2">
+            <div th:each="item : ${items}" class="flex items-center justify-between text-sm">
+                <span class="text-[#2C2926]" th:text="${item.product.name} + ' × ' + ${item.quantity}">Item</span>
+                <span class="font-semibold text-[#1C2C20]" th:text="'₹' + ${item.lineTotal}">₹0</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="/" class="px-6 py-3.5 rounded-full bg-[#263E2E] text-white font-semibold text-sm hover:bg-[#1A2D20] transition-colors">Back to Home</a>
+        <a th:href="${brandWhatsappUrl}" target="_blank" rel="noreferrer" class="px-6 py-3.5 rounded-full bg-[#FAF7F2] text-[#263E2E] font-semibold text-sm border border-[#DDD3C2] hover:bg-[#F2E8D7] transition-colors">Message us on WhatsApp</a>
+    </div>
+</main>
+
+<div th:replace="~{fragments/layout :: footer}"></div>
+</body>
+</html>

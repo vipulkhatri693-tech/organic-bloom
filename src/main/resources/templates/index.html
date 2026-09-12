@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="~{fragments/layout :: head('Organic Bloom — Botanical Artisanal Soaps')}"></head>
+<body>
+<div th:replace="~{fragments/layout :: navbar}"></div>
+
+<main>
+    <!-- Flash message -->
+    <div th:if="${flash}" class="max-w-7xl mx-auto px-4 pt-4">
+        <div class="rounded-xl bg-[#E4ECE4] border border-[#B9CBB9] text-[#263E2E] text-sm px-4 py-3" th:text="${flash}"></div>
+    </div>
+
+    <!-- HERO -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-[#F5F0EA] to-[#FAF7F2]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20 grid lg:grid-cols-2 gap-10 items-center">
+            <div class="space-y-6">
+                <span class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-[#263E2E] uppercase bg-[#E4ECE4] border border-[#B9CBB9] px-3 py-1.5 rounded-full">
+                    ✨ Handmade Melt &amp; Pour • 100% Natural
+                </span>
+                <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#1C2C20] leading-[1.05]">
+                    Naturally Better,<br/>Beautifully You
+                </h1>
+                <p class="text-base sm:text-lg text-[#5C554C] max-w-lg">
+                    Handcrafted botanical soaps infused with pure Rice milk, Activated Charcoal, and 18 sacred Ayurvedic
+                    herbs. Sulfate &amp; paraben free, poured in micro-batches in our Ahmedabad atelier.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="#collection"
+                       class="px-6 py-3.5 rounded-full bg-[#263E2E] text-[#FAF7F2] font-semibold text-sm hover:bg-[#1A2D20] transition-colors shadow-xs">
+                        Shop the Collection
+                    </a>
+                    <a href="#craft-ritual"
+                       class="px-6 py-3.5 rounded-full bg-[#FAF7F2] text-[#263E2E] font-semibold text-sm border border-[#DDD3C2] hover:bg-[#F2E8D7] transition-colors">
+                        The Melt &amp; Pour Craft
+                    </a>
+                </div>
+                <div class="flex flex-wrap gap-6 pt-4 text-sm text-[#5C554C]">
+                    <div><strong class="font-display text-2xl text-[#1C2C20] block">₹99</strong>Charcoal Soap</div>
+                    <div><strong class="font-display text-2xl text-[#1C2C20] block">18</strong>Vedic Herbs</div>
+                    <div><strong class="font-display text-2xl text-[#1C2C20] block">100%</strong>Sulfate Free</div>
+                </div>
+            </div>
+
+            <!-- Hero combo cards -->
+            <div class="grid sm:grid-cols-2 gap-4">
+                <div th:each="combo, iter : ${heroCombos}"
+                     th:classappend="${iter.index == 0} ? 'sm:col-span-2' : ''"
+                     class="bg-[#FAF7F2] rounded-2xl border border-[#E6DDCF] shadow-xs hover:shadow-lg transition-all overflow-hidden flex">
+                    <div class="w-2/5 bg-[#EFE9DF]">
+                        <img th:src="${combo.image}" th:alt="${combo.name}" class="w-full h-full object-cover"/>
+                    </div>
+                    <div class="flex-1 p-4 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-[#8B5A2B]" th:text="${combo.badge}">Combo</span>
+                            <h3 class="font-display text-lg font-bold text-[#1C2C20] leading-snug mt-1" th:text="${combo.name}">Combo</h3>
+                            <p class="text-xs text-[#6B6459] mt-1 line-clamp-2" th:text="${combo.subtitle}">details</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-3">
+                            <span class="font-display text-xl font-bold text-[#1C2C20]" th:text="'₹' + ${combo.price}">₹449</span>
+                            <a th:href="'/product/' + ${combo.id}"
+                               class="text-xs font-semibold text-[#263E2E] bg-[#E4ECE4] px-3 py-1.5 rounded-full hover:bg-[#D5E1D6] transition-colors">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRAND PILLARS -->
+    <section id="brand-pillars" class="py-14 bg-[#F5F0EA] border-y border-[#E8DFD3]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold tracking-widest text-[#263E2E] uppercase">The Organic Bloom Promise</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-semibold text-[#1F3325] mt-1.5">Naturally Better, Beautifully You</h2>
+                <p class="text-sm sm:text-base text-[#5C554C] mt-2.5">
+                    Crafted with passion using honest ingredients, fair pricing, and pure botanical nourishment for your everyday bath ritual.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div th:each="pillar : ${pillars}"
+                     class="bg-[#FAF7F2] rounded-xl p-6 border border-[#E4DCCF] shadow-xs hover:shadow-md transition-all flex flex-col">
+                    <div class="w-12 h-12 rounded-xl bg-[#E6EFE7] border border-[#CADBCB] flex items-center justify-center text-[#263E2E] mb-4 font-display font-bold">✿</div>
+                    <span class="text-[11px] font-bold text-[#8B5A2B] uppercase tracking-wider block mb-1" th:text="${pillar.tag}">tag</span>
+                    <h3 class="font-display text-xl font-semibold text-[#213527] mb-2" th:text="${pillar.title}">title</h3>
+                    <p class="text-xs sm:text-sm text-[#5B544B] leading-relaxed" th:text="${pillar.description}">desc</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT CATALOG -->
+    <section id="collection" class="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-8 pb-6 border-b border-[#E8DFD3]">
+            <div class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#263E2E] uppercase tracking-widest mb-1.5">
+                <span class="text-[#C48039]">✦</span><span>Organic Bloom Handcrafted Collection</span>
+            </div>
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#1C2C20]">Handmade Goodness for Healthy, Glowing Skin</h2>
+            <p class="text-sm text-[#5F584E] mt-2 max-w-2xl">
+                Sulfate &amp; paraben free, Melt &amp; Pour artisan soaps crafted in small batches. Available individually or in high-value combo packs!
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+            <div th:each="product : ${products}" th:id="'product-' + ${product.id}"
+                 th:classappend="${product.id == 'combo-charcoal-max'} ? 'border-2 border-[#C48039] ring-2 ring-[#F4E3CB]/60' : 'border border-[#E6DDCF]'"
+                 class="group bg-[#FAF7F2] rounded-2xl overflow-hidden shadow-xs hover:shadow-lg transition-all flex flex-col justify-between">
+                <a th:href="'/product/' + ${product.id}" class="relative aspect-[4/3] bg-[#EFE9DF] overflow-hidden block">
+                    <img th:src="${product.image}" th:alt="${product.name}"
+                         class="w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-500"/>
+                    <span th:if="${product.badge}"
+                          class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full text-[11px] font-bold tracking-wide bg-[#263E2E] text-[#FAF7F2] shadow-sm"
+                          th:text="${product.badge}">Badge</span>
+                    <div class="absolute bottom-2 left-2 right-2 flex justify-between items-center">
+                        <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-black/60 text-white"
+                              th:text="${product.category == 'bundle'} ? 'Value Pack' : 'Handmade Bar'">Bar</span>
+                        <span class="text-[10px] text-white/90 bg-[#263E2E]/80 px-2 py-0.5 rounded">Pure Botanical</span>
+                    </div>
+                </a>
+
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-[#6B645A] mb-1.5">
+                            <div class="flex items-center gap-1">
+                                <span class="text-[#C48039]">★</span>
+                                <span class="font-bold text-[#2C2926]" th:text="${product.rating}">5.0</span>
+                                <span th:text="'(' + ${product.reviewCount} + ')'">(5)</span>
+                            </div>
+                            <span class="text-[11px] text-[#263E2E] bg-[#E8EFE8] px-2 py-0.5 rounded font-semibold" th:text="${product.primaryActive}">Active</span>
+                        </div>
+                        <a th:href="'/product/' + ${product.id}">
+                            <h3 class="font-display text-xl font-bold text-[#1C2C20] group-hover:text-[#263E2E] transition-colors leading-snug" th:text="${product.name}">Name</h3>
+                        </a>
+                        <p class="text-xs text-[#6B6459] mt-1 font-serif-sub line-clamp-1" th:text="${product.subtitle}">subtitle</p>
+                        <div class="flex flex-wrap gap-1.5 mt-3">
+                            <span th:each="herb : ${#lists.subList(product.keyBotanicals, 0, product.keyBotanicals.size() > 3 ? 3 : product.keyBotanicals.size())}"
+                                  class="text-[10px] font-medium bg-[#F1EBE0] text-[#554E45] px-2 py-0.5 rounded-full" th:text="${herb}">herb</span>
+                        </div>
+                        <p class="text-xs text-[#524B41] mt-3 leading-relaxed line-clamp-2" th:text="${product.description}">desc</p>
+                    </div>
+
+                    <div class="mt-5 pt-3.5 border-t border-[#E8DFD3] flex items-center justify-between">
+                        <div>
+                            <div class="flex items-baseline gap-1.5">
+                                <span class="font-display text-2xl font-bold text-[#1C2C20]" th:text="'₹' + ${product.price}">₹99</span>
+                                <span th:if="${product.originalPrice}" class="text-xs text-[#8A8277] line-through" th:text="'₹' + ${product.originalPrice}">₹149</span>
+                                <span th:if="${product.savings > 0}" class="text-[11px] text-[#263E2E] font-bold" th:text="'Save ₹' + ${product.savings}">Save</span>
+                            </div>
+                            <span class="text-[10px] text-[#7A7368]" th:text="${product.category == 'bar'} ? '100% Pure Natural Herbs' : 'Combo Discount Pack'">note</span>
+                        </div>
+                        <form th:action="@{/cart/add}" method="post">
+                            <input type="hidden" name="productId" th:value="${product.id}"/>
+                            <input type="hidden" name="redirect" value="/#collection"/>
+                            <button type="submit"
+                                    class="px-4 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all bg-[#263E2E] text-[#FAF7F2] hover:bg-[#1A2D20] shadow-xs">
+                                + Add to Bag
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4-in-1 callout -->
+        <div class="mt-12 bg-gradient-to-r from-[#263E2E] to-[#1C2C20] text-white rounded-2xl p-6 sm:p-8 shadow-lg border border-[#3E5C46] flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="space-y-2">
+                <div class="inline-flex items-center gap-1.5 text-xs text-[#E3B873] font-bold uppercase tracking-wider">✦ Best Seller Value Pack</div>
+                <h3 class="font-display text-2xl sm:text-3xl font-bold text-white">4-in-1 Charcoal Max Combo for ₹449</h3>
+                <p class="text-xs sm:text-sm text-[#C4D9C8] max-w-xl">
+                    Get <strong>2 Charcoal Soaps + 1 Rice Soap + 1 Bridal Ubtan Soap</strong> in one curated box. Deep pore
+                    detox, daily rice brightening, and traditional haldi chandan glow.
+                </p>
+                <div class="flex flex-wrap gap-4 text-xs text-[#E3B873] pt-1">
+                    <span>✓ 2 Charcoal (₹200)</span><span>✓ 1 Rice Soap (₹149)</span><span>✓ 1 Bridal Ubtan (₹199)</span>
+                    <span class="font-bold text-white bg-[#34533D] px-2 py-0.5 rounded">You Pay Only ₹449</span>
+                </div>
+            </div>
+            <form th:action="@{/cart/add}" method="post">
+                <input type="hidden" name="productId" value="combo-charcoal-max"/>
+                <input type="hidden" name="redirect" value="/cart"/>
+                <button type="submit"
+                        class="px-6 py-3.5 rounded-full bg-[#E3B873] hover:bg-[#D4A760] text-[#1C2C20] font-bold text-xs uppercase tracking-wider transition-colors shadow-md">
+                    Add 4-in-1 Combo (₹449)
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- CRAFT RITUAL -->
+    <section id="craft-ritual" class="py-16 bg-[#F5F0EA] border-y border-[#E8DFD3]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold tracking-widest text-[#263E2E] uppercase">Our Atelier Method</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-semibold text-[#1F3325] mt-1.5">The Melt &amp; Pour Craft</h2>
+                <p class="text-sm sm:text-base text-[#5C554C] mt-2.5">
+                    Every bar is made by hand in three careful stages, preserving natural glycerin and the full potency of raw botanicals.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div th:each="step : ${craftSteps}" class="bg-[#FAF7F2] rounded-2xl border border-[#E4DCCF] shadow-xs overflow-hidden flex flex-col">
+                    <div class="aspect-[16/10] bg-[#EFE9DF]">
+                        <img th:src="${step.image}" th:alt="${step.title}" class="w-full h-full object-cover"/>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <span class="text-[11px] font-bold text-[#8B5A2B] uppercase tracking-wider" th:text="${step.timeframe}">Step</span>
+                        <h3 class="font-display text-xl font-semibold text-[#213527] mt-1 mb-2" th:text="${step.title}">Title</h3>
+                        <p class="text-xs sm:text-sm text-[#5B544B] leading-relaxed" th:text="${step.description}">desc</p>
+                        <p class="text-xs text-[#263E2E] bg-[#E8EFE8] rounded-lg px-3 py-2 mt-auto" th:text="${step.detail}">detail</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq-section" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+            <span class="text-xs font-bold tracking-widest text-[#263E2E] uppercase">Good to Know</span>
+            <h2 class="font-display text-3xl sm:text-4xl font-semibold text-[#1F3325] mt-1.5">Frequently Asked Questions</h2>
+        </div>
+        <div class="space-y-3">
+            <details th:each="faq : ${faqs}" class="group bg-[#FAF7F2] rounded-xl border border-[#E4DCCF] shadow-xs overflow-hidden">
+                <summary class="cursor-pointer list-none flex items-center justify-between gap-4 px-5 py-4 font-display text-lg font-semibold text-[#213527]">
+                    <span th:text="${faq.question}">Question</span>
+                    <span class="text-[#C48039] text-xl group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <div class="px-5 pb-5 text-sm text-[#5B544B] leading-relaxed" th:text="${faq.answer}">Answer</div>
+            </details>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="py-16 bg-[#263E2E] text-white">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5">
+            <h2 class="font-display text-3xl sm:text-4xl font-semibold">Join the Botanical Circle</h2>
+            <p class="text-sm text-[#C4D9C8]">Get first access to new micro-batches, seasonal herbs, and combo offers. No spam — just soap.</p>
+            <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="event.preventDefault(); this.reset(); document.getElementById('nl-thanks').classList.remove('hidden');">
+                <input type="email" required placeholder="you@example.com"
+                       class="flex-1 rounded-full px-5 py-3 text-sm text-[#1C2C20] bg-[#FAF7F2] focus:outline-none"/>
+                <button type="submit" class="px-6 py-3 rounded-full bg-[#E3B873] hover:bg-[#D4A760] text-[#1C2C20] font-bold text-sm transition-colors">Subscribe</button>
+            </form>
+            <p id="nl-thanks" class="hidden text-sm text-[#E3B873] font-semibold">Thank you for subscribing! 🌿</p>
+        </div>
+    </section>
+</main>
+
+<div th:replace="~{fragments/layout :: footer}"></div>
+</body>
+</html>

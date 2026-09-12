@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title th:text="${title}">Organic Bloom</title>
+    <meta name="description"
+          content="Organic Bloom — handcrafted Melt &amp; Pour botanical soaps. Rice, Charcoal &amp; 18-herb Bridal Ubtan. 100% sulfate &amp; paraben free. Pan-India delivery."/>
+    <meta name="theme-color" content="#263E2E"/>
+    <link rel="icon" type="image/svg+xml" href="/images/organic-bloom-logo.svg"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700&display=swap"
+          rel="stylesheet"/>
+    <script th:inline="javascript">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Fraunces', 'serif'],
+                        sans: ['"Nunito Sans"', 'sans-serif'],
+                        'serif-sub': ['Fraunces', 'serif']
+                    },
+                    boxShadow: { xs: '0 1px 2px 0 rgb(0 0 0 / 0.05)' }
+                }
+            }
+        };
+    </script>
+    <style>
+        body { font-family: 'Nunito Sans', sans-serif; background-color: #FAF7F2; color: #2C2926; }
+        .font-display { font-family: 'Fraunces', serif; }
+        .font-serif-sub { font-family: 'Fraunces', serif; }
+        .scrollbar-none::-webkit-scrollbar { display: none; }
+        .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+        html { scroll-behavior: smooth; }
+        .line-clamp-1 { display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden; }
+        .line-clamp-2 { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+    </style>
+</head>
+<body>
+<!-- Navbar fragment -->
+<header th:fragment="navbar" class="sticky top-0 z-40 w-full">
+    <div class="bg-[#1C2C20] text-[#E7EFE8] text-xs py-2 px-4 border-b border-[#2C4533]">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+            <div class="hidden md:flex items-center gap-2 text-[#C4DCC8]">
+                <span class="text-[#E3B873]">◈</span>
+                <span>Botanical Cold Process Atelier • Pan-India Courier</span>
+            </div>
+            <div class="flex-1 text-center font-medium tracking-wide text-[11px] sm:text-xs">
+                <span>✨ <strong class="text-[#E3B873]">Value Combo:</strong> 2 Charcoal + 1 Rice + 1 Bridal Ubtan — our best-selling bundle!</span>
+                <a th:href="${brandInstagramUrl}" target="_blank" rel="noreferrer"
+                   class="ml-2 hidden sm:inline-flex items-center gap-1 underline font-semibold text-[#E3B873] hover:text-white">
+                    <span th:text="'@' + ${brandInstagram}">@organic_bloom03</span>
+                </a>
+            </div>
+            <a th:href="'tel:' + ${brandPhone}"
+               class="hidden sm:inline-flex items-center gap-1 text-[11px] text-[#A6C5AD] hover:text-white bg-[#29422F] px-2 py-0.5 rounded"
+               th:text="${brandPhoneFormatted}">+91 93132 68959</a>
+        </div>
+    </div>
+
+    <nav class="w-full bg-[#FAF7F2] border-b border-[#ECE5DA]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2.5 group">
+                <img src="/images/organic-bloom-logo.svg" alt="Organic Bloom logo" class="w-10 h-10"/>
+                <span class="flex flex-col leading-none">
+                    <span class="font-display text-xl font-bold text-[#1C2C20]" th:text="${brandName}">Organic Bloom</span>
+                    <span class="text-[10px] tracking-widest uppercase text-[#8B5A2B] font-semibold">Botanical Soaps</span>
+                </span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-6 text-[14px] font-medium text-[#48433C]">
+                <a href="/#collection" class="hover:text-[#263E2E] transition-colors py-1">All Soaps</a>
+                <a href="/product/charcoal-soap" class="hover:text-[#263E2E] transition-colors py-1">Charcoal Soap</a>
+                <a href="/product/rice-soap" class="hover:text-[#263E2E] transition-colors py-1">Rice Soap</a>
+                <a href="/product/bridal-ubtan-soap" class="hover:text-[#263E2E] transition-colors py-1">Bridal Ubtan</a>
+                <a href="/#collection" class="hover:text-[#263E2E] transition-colors py-1 flex items-center gap-1.5">
+                    <span>4-in-1 Combo</span>
+                    <span class="bg-[#E4ECE4] text-[#263E2E] text-[10px] font-bold px-1.5 py-0.5 rounded-full">Best Value</span>
+                </a>
+                <a href="/#craft-ritual" class="hover:text-[#263E2E] transition-colors py-1">Melt &amp; Pour Craft</a>
+            </div>
+
+            <div class="flex items-center gap-2 sm:gap-3">
+                <a th:href="${brandInstagramUrl}" target="_blank" rel="noreferrer"
+                   class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-[#1C2C20] bg-[#EFE8DC] hover:bg-[#E5DDCE] border border-[#D9CEBE] transition-colors">
+                    <span th:text="'@' + ${brandInstagram}">@organic_bloom03</span>
+                </a>
+                <a href="/cart"
+                   class="relative flex items-center gap-2 p-2 sm:px-3.5 sm:py-2 rounded-full bg-[#263E2E] text-[#FAF7F2] hover:bg-[#1E3224] transition-all shadow-xs group">
+                    <span class="hidden sm:inline-block text-xs font-semibold tracking-wider uppercase">Cart</span>
+                    <span class="flex items-center justify-center min-w-[20px] h-5 px-1 rounded-full bg-[#C88A58] text-white text-[11px] font-bold"
+                          th:text="${cartCount}">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Footer fragment -->
+<footer th:fragment="footer" class="bg-[#1C2C20] text-[#E0EBE2] pt-16 pb-12 border-t border-[#29422F] mt-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-[#2C4533]">
+            <div class="lg:col-span-2 space-y-4">
+                <div class="flex items-center gap-2.5">
+                    <img src="/images/organic-bloom-logo.svg" alt="Organic Bloom logo" class="w-10 h-10"/>
+                    <span class="font-display text-xl font-bold text-white" th:text="${brandName}">Organic Bloom</span>
+                </div>
+                <p class="text-xs text-[#A8C4AF] leading-relaxed max-w-sm">
+                    Handcrafted Melt &amp; Pour herbal soaps: pure plant base is gently melted down, infused with real
+                    botanicals, and hand-poured in small batches for healthy, radiant skin.
+                </p>
+                <div class="space-y-2 pt-2 text-xs text-[#C6DBCB]">
+                    <div>India • Pan-India Courier Delivery</div>
+                    <div><a th:href="${brandInstagramUrl}" target="_blank" rel="noreferrer"
+                            class="hover:text-white underline font-semibold" th:text="'Instagram @' + ${brandInstagram}">Instagram</a></div>
+                    <div><a th:href="${brandWhatsappUrl}" target="_blank" rel="noreferrer" class="hover:text-white font-semibold"
+                            th:text="'WhatsApp Orders: ' + ${brandPhoneFormatted}">WhatsApp</a></div>
+                    <div><a th:href="'mailto:' + ${brandEmail}" class="hover:text-white" th:text="'Email: ' + ${brandEmail}">Email</a></div>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="text-xs uppercase tracking-widest text-[#E3B873] font-bold">Our Soaps &amp; Combos</h4>
+                <ul class="space-y-2 text-xs text-[#B2CDB9]">
+                    <li><a href="/product/charcoal-soap" class="hover:text-white">🖤 Charcoal Soap (₹99)</a></li>
+                    <li><a href="/product/rice-soap" class="hover:text-white">🌾 Rice Soap (₹149)</a></li>
+                    <li><a href="/product/bridal-ubtan-soap" class="hover:text-white">✨ Bridal Ubtan Soap (₹199)</a></li>
+                    <li><a href="/product/combo-rice-ubtan" class="hover:text-white">🎁 Rice + Charcoal Combo (₹179)</a></li>
+                    <li><a href="/product/combo-trio" class="hover:text-white">🎁 3-in-1 Radiance Trio (₹399)</a></li>
+                    <li><a href="/product/combo-charcoal-max" class="hover:text-white font-bold text-[#E3B873]">🎁 4-in-1 Charcoal Max (₹449)</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="text-xs uppercase tracking-widest text-[#E3B873] font-bold">Payment Modes Accepted</h4>
+                <div class="space-y-2 text-xs text-[#A0BFA8]">
+                    <div class="text-white font-medium">• Cash on Delivery (COD)</div>
+                    <div class="text-white font-medium">• PhonePe / UPI QR</div>
+                    <div class="text-white font-medium">• Google Pay (GPay)</div>
+                    <div class="p-2.5 rounded-xl bg-[#142217] border border-[#2B4532] space-y-1.5 mt-2">
+                        <span class="text-[10px] text-[#A6C5AD]">Official PhonePe UPI:</span>
+                        <p class="font-mono text-xs font-bold text-white tracking-wide" th:text="${brandUpiId}">upi@ybl</p>
+                        <span class="text-[10px] text-[#86A68F]" th:text="${brandBankName}">HDFC Bank</span>
+                    </div>
+                    <div class="pt-2 border-t border-[#2C4533] space-y-1.5">
+                        <div class="text-[#E3B873]">✓ 100% Chemical &amp; Sulfate Free</div>
+                        <div class="text-[#E3B873]">✓ Pure Botanical Melt &amp; Pour Craft</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#86A68F] gap-4">
+            <p th:text="'© ' + ${#dates.year(#dates.createNow())} + ' Organic Bloom • Handcrafted Soaps, Ahmedabad, India. Direct orders: ' + ${brandPhoneFormatted}">© Organic Bloom</p>
+            <span>COD Available • Pan-India Courier</span>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
