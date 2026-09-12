@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <!-- Warm natural ambient background -->
+    <radialGradient id="cropBg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#3A3228"/>
+      <stop offset="60%" stop-color="#221E19"/>
+      <stop offset="100%" stop-color="#14120F"/>
+    </radialGradient>
+
+    <!-- Wood Slice Texture Gradient -->
+    <radialGradient id="cropWood" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#BA8657"/>
+      <stop offset="60%" stop-color="#91613A"/>
+      <stop offset="90%" stop-color="#6B4323"/>
+      <stop offset="100%" stop-color="#472A12"/>
+    </radialGradient>
+
+    <!-- Rich Glossy Charcoal Petal Gradient -->
+    <radialGradient id="charcoalGloss" cx="45%" cy="38%" r="65%">
+      <stop offset="0%" stop-color="#46494C"/>
+      <stop offset="45%" stop-color="#242628"/>
+      <stop offset="85%" stop-color="#141516"/>
+      <stop offset="100%" stop-color="#0A0B0C"/>
+    </radialGradient>
+
+    <filter id="cropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="600" fill="url(#cropBg)"/>
+
+  <!-- Soft botanical leaf shadows in ambient background -->
+  <g opacity="0.3" fill="#385434">
+    <ellipse cx="520" cy="120" rx="90" ry="170" transform="rotate(35 520 120)"/>
+    <ellipse cx="80" cy="100" rx="80" ry="150" transform="rotate(-30 80 100)"/>
+  </g>
+
+  <!-- Thick Rustic Tree Log Slice -->
+  <ellipse cx="300" cy="420" rx="270" ry="120" fill="url(#cropWood)" filter="url(#cropShadow)"/>
+  <!-- Growth rings -->
+  <ellipse cx="300" cy="420" rx="240" ry="105" fill="none" stroke="#5A3A1F" stroke-width="2.5" stroke-opacity="0.5"/>
+  <ellipse cx="300" cy="420" rx="195" ry="85" fill="none" stroke="#754E2B" stroke-width="2" stroke-opacity="0.5"/>
+  <ellipse cx="300" cy="420" rx="140" ry="60" fill="none" stroke="#8A5E35" stroke-width="1.5" stroke-opacity="0.4"/>
+
+  <!-- Fresh Green Leaves (Tea Tree & Neem) -->
+  <g fill="#43703E" stroke="#254322" stroke-width="1.2">
+    <!-- Left foliage -->
+    <path d="M 80 410 C 30 380, 40 330, 100 350 C 140 365, 120 420, 80 410 Z"/>
+    <path d="M 120 450 C 60 440, 70 500, 140 480 C 170 470, 155 440, 120 450 Z"/>
+    <path d="M 140 370 C 110 330, 130 300, 170 320 C 190 335, 175 375, 140 370 Z"/>
+    <!-- Right foliage -->
+    <path d="M 520 400 C 570 370, 560 320, 500 340 C 470 355, 485 410, 520 400 Z"/>
+    <path d="M 480 450 C 540 440, 530 500, 460 480 C 430 470, 445 440, 480 450 Z"/>
+  </g>
+
+  <!-- Stack of Handcrafted Carved Flower-Petal Charcoal Soaps -->
+
+  <!-- Left Base Soap -->
+  <g transform="translate(190, 360)" filter="url(#cropShadow)">
+    <circle cx="0" cy="0" r="85" fill="url(#charcoalGloss)"/>
+    <g fill="#1D1E20" stroke="#42464A" stroke-width="1.4">
+      <circle cx="0" cy="0" r="74" fill="none" stroke="#36393C" stroke-width="10" stroke-dasharray="14 6"/>
+      <circle cx="0" cy="0" r="56" fill="none" stroke="#2C2E30" stroke-width="9" stroke-dasharray="11 5"/>
+      <circle cx="0" cy="0" r="36" fill="#141517" stroke="#4E5256" stroke-width="2"/>
+      <circle cx="0" cy="0" r="18" fill="#0E0F10" stroke="#6C7278" stroke-width="1.2"/>
+      <circle cx="0" cy="0" r="6" fill="#4B5056"/>
+    </g>
+  </g>
+
+  <!-- Right Base Soap -->
+  <g transform="translate(410, 360)" filter="url(#cropShadow)">
+    <circle cx="0" cy="0" r="85" fill="url(#charcoalGloss)"/>
+    <g fill="#1D1E20" stroke="#42464A" stroke-width="1.4">
+      <circle cx="0" cy="0" r="74" fill="none" stroke="#36393C" stroke-width="10" stroke-dasharray="14 6"/>
+      <circle cx="0" cy="0" r="56" fill="none" stroke="#2C2E30" stroke-width="9" stroke-dasharray="11 5"/>
+      <circle cx="0" cy="0" r="36" fill="#141517" stroke="#4E5256" stroke-width="2"/>
+      <circle cx="0" cy="0" r="18" fill="#0E0F10" stroke="#6C7278" stroke-width="1.2"/>
+      <circle cx="0" cy="0" r="6" fill="#4B5056"/>
+    </g>
+  </g>
+
+  <!-- Top Hero Center Soap (Blooming Dahlia Petals) -->
+  <g transform="translate(300, 245)" filter="url(#cropShadow)">
+    <circle cx="0" cy="0" r="95" fill="url(#charcoalGloss)"/>
+    <!-- Intricate Sculpted Petals -->
+    <g fill="#1C1D1F" stroke="#4C5055" stroke-width="1.5">
+      <!-- Outer petal ring -->
+      <circle cx="0" cy="0" r="84" fill="none" stroke="#3A3C40" stroke-width="12" stroke-dasharray="16 7"/>
+      <!-- Mid petal ring -->
+      <circle cx="0" cy="0" r="64" fill="none" stroke="#2E3033" stroke-width="11" stroke-dasharray="12 5"/>
+      <!-- Inner petal ring -->
+      <circle cx="0" cy="0" r="44" fill="none" stroke="#242628" stroke-width="9" stroke-dasharray="9 4"/>
+      <!-- Flower Center Core -->
+      <circle cx="0" cy="0" r="26" fill="#121314" stroke="#626870" stroke-width="2"/>
+      <circle cx="0" cy="0" r="14" fill="#0A0B0C" stroke="#828A94" stroke-width="1.2"/>
+      <circle cx="0" cy="0" r="5" fill="#A4ACB6"/>
+    </g>
+  </g>
+
+  <!-- Front Foreground Soap (Close to camera, maximum glossy depth) -->
+  <g transform="translate(300, 440)" filter="url(#cropShadow)">
+    <circle cx="0" cy="0" r="90" fill="url(#charcoalGloss)"/>
+    <g fill="#1F2123" stroke="#52575D" stroke-width="1.6">
+      <circle cx="0" cy="0" r="80" fill="none" stroke="#3E4145" stroke-width="11" stroke-dasharray="15 6"/>
+      <circle cx="0" cy="0" r="60" fill="none" stroke="#323438" stroke-width="10" stroke-dasharray="11 5"/>
+      <circle cx="0" cy="0" r="40" fill="none" stroke="#26282B" stroke-width="8" stroke-dasharray="8 4"/>
+      <circle cx="0" cy="0" r="22" fill="#111213" stroke="#6E757E" stroke-width="1.8"/>
+      <circle cx="0" cy="0" r="10" fill="#08090A" stroke="#949DA8" stroke-width="1"/>
+      <circle cx="0" cy="0" r="4" fill="#BCC5D0"/>
+    </g>
+  </g>
+
+  <!-- Subtle authentic watermark badge in corner -->
+  <g transform="translate(60, 60)">
+    <circle cx="0" cy="0" r="28" fill="#EFE6D5" stroke="#263E2E" stroke-width="1.5" opacity="0.92"/>
+    <text x="0" y="-3" font-family="'Cormorant Garamond', Georgia, serif" font-size="12" font-weight="700" fill="#263E2E" text-anchor="middle">OB</text>
+    <text x="0" y="9" font-family="'Cormorant Garamond', Georgia, serif" font-size="6" font-weight="700" fill="#263E2E" text-anchor="middle" letter-spacing="0.5">ORGANIC BLOOM</text>
+  </g>
+</svg>

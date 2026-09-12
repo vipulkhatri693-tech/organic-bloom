@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <linearGradient id="comboBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#283A2E"/>
+      <stop offset="50%" stop-color="#1E2B22"/>
+      <stop offset="100%" stop-color="#141D17"/>
+    </linearGradient>
+    <radialGradient id="craftBox" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#EADBCE"/>
+      <stop offset="70%" stop-color="#CFBCA9"/>
+      <stop offset="100%" stop-color="#B29F8A"/>
+    </radialGradient>
+    <filter id="boxShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#070B08" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#comboBg)"/>
+
+  <!-- Top Logo Header -->
+  <g transform="translate(400, 100)">
+    <circle cx="0" cy="0" r="46" fill="#EFE6D5" stroke="#263E2E" stroke-width="2"/>
+    <text x="0" y="-6" font-family="'Cormorant Garamond', Georgia, serif" font-size="18" font-weight="700" fill="#263E2E" text-anchor="middle">OB</text>
+    <text x="0" y="10" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" font-weight="700" fill="#263E2E" text-anchor="middle" letter-spacing="1">ORGANIC BLOOM</text>
+    <text x="0" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-size="6.5" font-weight="600" fill="#4B6652" text-anchor="middle" letter-spacing="1.5">AHMEDABAD ATELIER</text>
+  </g>
+
+  <!-- Title & Savings Headline -->
+  <text x="400" y="195" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" font-weight="700" fill="#FAF5ED" text-anchor="middle" letter-spacing="2">4-IN-1 CHARCOAL MAX COMBO</text>
+  <text x="400" y="225" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600" fill="#E5BD68" text-anchor="middle" letter-spacing="2">2 CHARCOAL + 1 RICE + 1 BRIDAL UBTAN SOAP</text>
+  <text x="400" y="250" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#CAD8CE" text-anchor="middle">
+    The ultimate complete Ayurvedic self-care ritual in zero-plastic eco packaging.
+  </text>
+
+  <!-- Big Craft Gift Box Display -->
+  <g transform="translate(400, 560)" filter="url(#boxShadow)">
+    <!-- Box Body -->
+    <rect x="-260" y="-200" width="520" height="380" rx="20" fill="url(#craftBox)" stroke="#8F7864" stroke-width="2"/>
+    <!-- Box divider line -->
+    <line x1="-260" y1="0" x2="260" y2="0" stroke="#8F7864" stroke-width="1.2" stroke-dasharray="4 4"/>
+    <line x1="0" y1="-200" x2="0" y2="180" stroke="#8F7864" stroke-width="1.2" stroke-dasharray="4 4"/>
+
+    <!-- Section 1: Top Left - Charcoal Floral Soap 1 -->
+    <g transform="translate(-130, -100)">
+      <circle cx="0" cy="0" r="62" fill="#1C1E20" stroke="#484E55" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="48" fill="none" stroke="#353A40" stroke-width="7" stroke-dasharray="9 4"/>
+      <circle cx="0" cy="0" r="24" fill="#0C0D0E" stroke="#5E6773" stroke-width="1.5"/>
+      <text x="0" y="80" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#2C241B" text-anchor="middle">CHARCOAL BAR 1</text>
+      <text x="0" y="93" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#6B5945" text-anchor="middle">Deep Pore Detox</text>
+    </g>
+
+    <!-- Section 2: Top Right - Charcoal Floral Soap 2 -->
+    <g transform="translate(130, -100)">
+      <circle cx="0" cy="0" r="62" fill="#1C1E20" stroke="#484E55" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="48" fill="none" stroke="#353A40" stroke-width="7" stroke-dasharray="9 4"/>
+      <circle cx="0" cy="0" r="24" fill="#0C0D0E" stroke="#5E6773" stroke-width="1.5"/>
+      <text x="0" y="80" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#2C241B" text-anchor="middle">CHARCOAL BAR 2</text>
+      <text x="0" y="93" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#6B5945" text-anchor="middle">Daily Oil Control</text>
+    </g>
+
+    <!-- Section 3: Bottom Left - Rice Soap -->
+    <g transform="translate(-130, 90)">
+      <rect x="-55" y="-55" width="110" height="110" rx="20" fill="#FAF6EE" stroke="#E0D5C3" stroke-width="1.5"/>
+      <!-- Rice flecks -->
+      <circle cx="-25" cy="-20" r="2" fill="#8C6848"/>
+      <circle cx="20" cy="-15" r="2.2" fill="#8C6848"/>
+      <circle cx="-10" cy="15" r="1.8" fill="#8C6848"/>
+      <circle cx="25" cy="22" r="2.1" fill="#8C6848"/>
+      <text x="0" y="75" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#2C241B" text-anchor="middle">RICE SOAP</text>
+      <text x="0" y="88" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#6B5945" text-anchor="middle">Tan Removal &amp; Soften</text>
+    </g>
+
+    <!-- Section 4: Bottom Right - Bridal Ubtan Soap -->
+    <g transform="translate(130, 90)">
+      <rect x="-45" y="-62" width="90" height="124" rx="12" fill="#A8662F" stroke="#CB8E55" stroke-width="1.5"/>
+      <!-- Specks -->
+      <circle cx="-15" cy="-30" r="2" fill="#3D1A04"/>
+      <circle cx="15" cy="-15" r="2.2" fill="#FBD368"/>
+      <circle cx="-10" cy="20" r="2.5" fill="#3D1A04"/>
+      <circle cx="20" cy="35" r="1.8" fill="#FBD368"/>
+      <text x="0" y="75" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#2C241B" text-anchor="middle">BRIDAL UBTAN</text>
+      <text x="0" y="88" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#6B5945" text-anchor="middle">18-Herb Radiant Glow</text>
+    </g>
+
+    <!-- Center Gift Seal -->
+    <circle cx="0" cy="0" r="38" fill="#1E3023" stroke="#D9A84E" stroke-width="2"/>
+    <text x="0" y="-8" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" fill="#E5BD68" text-anchor="middle">SUPER SAVER</text>
+    <text x="0" y="10" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">COMBO</text>
+    <text x="0" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="600" fill="#CAD8CE" text-anchor="middle">SAVE ₹150</text>
+  </g>
+
+  <!-- Price Tag at Bottom Left -->
+  <g transform="translate(120, 800)">
+    <rect x="0" y="0" width="180" height="90" rx="10" fill="#131B15" stroke="#D9A84E" stroke-width="2"/>
+    <text x="90" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#E5BD68" text-anchor="middle" letter-spacing="1.5">SPECIAL COMBO PRICE</text>
+    <text x="90" y="62" font-family="'Cormorant Garamond', Georgia, serif" font-size="42" font-weight="700" fill="#FFFFFF" text-anchor="middle">₹449/-</text>
+    <text x="90" y="79" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#95A69B" text-anchor="middle">MRP ₹599 (SAVE ₹150)</text>
+  </g>
+
+  <!-- Order & Delivery Highlights on Right -->
+  <g transform="translate(680, 820)" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#CAD8CE" text-anchor="end">
+    <text x="0" y="0">✓ Fast Pan-India Delivery</text>
+    <text x="0" y="22">✓ Cash On Delivery Available</text>
+    <text x="0" y="44">✓ GPay / PhonePe / WhatsApp Order</text>
+    <text x="0" y="66" fill="#E5BD68">✓ 100% Cold-Processed in Ahmedabad</text>
+  </g>
+
+  <!-- Bottom Strip -->
+  <g transform="translate(400, 950)">
+    <rect x="-240" y="-18" width="480" height="36" rx="18" fill="#EFE6D5"/>
+    <text x="0" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#1C2C20" text-anchor="middle" letter-spacing="1">
+      DIRECT ORDERS: +91 93132 68959 • INSTAGRAM: @ORGANIC_BLOOM03
+    </text>
+  </g>
+</svg>

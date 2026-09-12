@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <!-- Background botanical ambiance gradient -->
+    <linearGradient id="charcoalBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2C2720"/>
+      <stop offset="40%" stop-color="#3B342A"/>
+      <stop offset="75%" stop-color="#24211A"/>
+      <stop offset="100%" stop-color="#191712"/>
+    </linearGradient>
+
+    <!-- Wood Slice Texture Gradient -->
+    <radialGradient id="woodSlice" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#B28254"/>
+      <stop offset="60%" stop-color="#8F623B"/>
+      <stop offset="90%" stop-color="#6B4524"/>
+      <stop offset="100%" stop-color="#472C13"/>
+    </radialGradient>
+
+    <!-- Black Charcoal Soap Luster Gradient -->
+    <radialGradient id="charcoalSoapShine" cx="45%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#3A3C3E"/>
+      <stop offset="50%" stop-color="#202224"/>
+      <stop offset="85%" stop-color="#121314"/>
+      <stop offset="100%" stop-color="#090A0B"/>
+    </radialGradient>
+
+    <!-- Price Tag Gold Gradient -->
+    <linearGradient id="goldBadge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2D28B"/>
+      <stop offset="50%" stop-color="#D9A84E"/>
+      <stop offset="100%" stop-color="#A87523"/>
+    </linearGradient>
+
+    <filter id="soapShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="1000" fill="url(#charcoalBg)"/>
+
+  <!-- Subtle natural backdrop plant shadows -->
+  <g opacity="0.25" fill="#4B6E40">
+    <ellipse cx="680" cy="220" rx="90" ry="180" transform="rotate(25 680 220)"/>
+    <ellipse cx="730" cy="380" rx="70" ry="140" transform="rotate(40 730 380)"/>
+    <ellipse cx="100" cy="180" rx="80" ry="160" transform="rotate(-30 100 180)"/>
+  </g>
+
+  <!-- Top Brand Seal Header -->
+  <g transform="translate(400, 110)">
+    <!-- Small Brand Seal -->
+    <circle cx="0" cy="0" r="54" fill="#EFE6D5" stroke="#263E2E" stroke-width="2"/>
+    <circle cx="0" cy="0" r="48" fill="none" stroke="#263E2E" stroke-width="0.8"/>
+    <!-- Logo Monogram -->
+    <text x="0" y="-10" font-family="'Cormorant Garamond', Georgia, serif" font-size="20" font-weight="700" fill="#263E2E" text-anchor="middle">OB</text>
+    <text x="0" y="8" font-family="'Cormorant Garamond', Georgia, serif" font-size="11" font-weight="700" fill="#263E2E" text-anchor="middle" letter-spacing="1">ORGANIC BLOOM</text>
+    <text x="0" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="600" fill="#607D67" text-anchor="middle" letter-spacing="1.5">— CHARCOAL SOAP —</text>
+  </g>
+
+  <!-- Main Poster Typography Header -->
+  <text x="400" y="210" font-family="'Cormorant Garamond', Georgia, serif" font-size="28" font-weight="600" fill="#F4EDE2" text-anchor="middle" letter-spacing="6">NATURE'S PURE TOUCH</text>
+  <text x="400" y="250" font-family="'Brush Script MT', 'Dancing Script', 'Cormorant Garamond', cursive" font-size="34" font-style="italic" fill="#E5BD68" text-anchor="middle">for Radiant You</text>
+
+  <!-- Tagline Text -->
+  <text x="400" y="280" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#C9BAA7" text-anchor="middle">
+    Handmade with care, infused with nature's goodness for deep cleansing &amp; healthy glowing skin.
+  </text>
+
+  <!-- Wooden Log Slice Center Stage -->
+  <ellipse cx="400" cy="620" rx="270" ry="110" fill="url(#woodSlice)" filter="url(#soapShadow)"/>
+  <!-- Concentric wood growth rings -->
+  <ellipse cx="400" cy="620" rx="240" ry="98" fill="none" stroke="#5A3A1F" stroke-width="2" stroke-opacity="0.4"/>
+  <ellipse cx="400" cy="620" rx="200" ry="82" fill="none" stroke="#754E2B" stroke-width="1.5" stroke-opacity="0.5"/>
+  <ellipse cx="400" cy="620" rx="150" ry="62" fill="none" stroke="#8A5E35" stroke-width="1.2" stroke-opacity="0.4"/>
+
+  <!-- Fresh Green Leaves framing the Soaps -->
+  <g fill="#43703E" stroke="#254322" stroke-width="1">
+    <!-- Left leaves -->
+    <path d="M 180 630 C 140 600, 150 560, 200 580 C 230 590, 210 640, 180 630 Z"/>
+    <path d="M 220 660 C 170 650, 180 700, 240 680 C 260 670, 250 650, 220 660 Z"/>
+    <!-- Right leaves -->
+    <path d="M 600 620 C 640 590, 650 550, 590 570 C 570 580, 580 620, 600 620 Z"/>
+    <path d="M 570 660 C 620 650, 630 690, 560 680 C 540 670, 550 650, 570 660 Z"/>
+  </g>
+
+  <!-- Stack of Floral Carved Charcoal Soaps (Flower Petal Pattern) -->
+  
+  <!-- Soap 1: Left Bottom Soap -->
+  <g transform="translate(300, 580)" filter="url(#soapShadow)">
+    <circle cx="0" cy="0" r="75" fill="url(#charcoalSoapShine)"/>
+    <!-- Carved Dahlia / Chrysanthemum Petals -->
+    <g fill="#1D1E20" stroke="#3D4043" stroke-width="1.2">
+      <!-- Outer petal ring -->
+      <path d="M 0 -70 C 12 -55, 12 -45, 0 -40 C -12 -45, -12 -55, 0 -70 Z"/>
+      <path d="M 27 -65 C 35 -50, 32 -40, 20 -38 C 12 -45, 16 -56, 27 -65 Z"/>
+      <path d="M 50 -50 C 54 -34, 48 -25, 37 -26 C 30 -34, 38 -44, 50 -50 Z"/>
+      <path d="M 65 -27 C 64 -10, 55 -3, 44 -8 C 40 -18, 51 -25, 65 -27 Z"/>
+      <path d="M 70 0 C 64 15, 54 20, 44 12 C 43 0, 55 -2, 70 0 Z"/>
+      <path d="M 65 27 C 54 40, 43 42, 36 31 C 39 19, 52 16, 65 27 Z"/>
+      <path d="M 50 50 C 35 60, 24 58, 20 45 C 26 34, 39 36, 50 50 Z"/>
+      <path d="M 27 65 C 10 70, 0 65, 0 52 C 10 43, 22 49, 27 65 Z"/>
+      <path d="M 0 70 C -12 68, -20 60, -18 48 C -8 41, 4 48, 0 70 Z"/>
+      <path d="M -27 65 C -38 60, -42 50, -36 38 C -26 34, -18 44, -27 65 Z"/>
+      <path d="M -50 50 C -58 40, -58 28, -48 20 C -40 20, -38 34, -50 50 Z"/>
+      <path d="M -65 27 C -70 12, -66 0, -54 -4 C -48 7, -53 20, -65 27 Z"/>
+      <path d="M -70 0 C -70 -16, -62 -24, -50 -24 C -47 -10, -56 0, -70 0 Z"/>
+      <path d="M -65 -27 C -60 -42, -50 -48, -38 -42 C -38 -28, -50 -20, -65 -27 Z"/>
+      <path d="M -50 -50 C -42 -62, -30 -65, -20 -54 C -22 -40, -36 -38, -50 -50 Z"/>
+      <path d="M -27 -65 C -15 -72, -4 -70, 0 -58 C -8 -48, -20 -52, -27 -65 Z"/>
+      <!-- Inner petal ring -->
+      <circle cx="0" cy="0" r="32" fill="#141517" stroke="#4A4E52" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="16" fill="#0E0F10" stroke="#686E74" stroke-width="1"/>
+      <circle cx="0" cy="0" r="6" fill="#42464A"/>
+    </g>
+  </g>
+
+  <!-- Soap 2: Right Bottom Soap -->
+  <g transform="translate(500, 580)" filter="url(#soapShadow)">
+    <circle cx="0" cy="0" r="75" fill="url(#charcoalSoapShine)"/>
+    <g fill="#1D1E20" stroke="#3D4043" stroke-width="1.2">
+      <!-- Petal design -->
+      <circle cx="0" cy="0" r="65" fill="none" stroke="#35373A" stroke-width="8" stroke-dasharray="10 5"/>
+      <circle cx="0" cy="0" r="50" fill="none" stroke="#2B2D30" stroke-width="8" stroke-dasharray="8 4"/>
+      <circle cx="0" cy="0" r="32" fill="#141517" stroke="#4A4E52" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="16" fill="#0E0F10" stroke="#686E74" stroke-width="1"/>
+      <circle cx="0" cy="0" r="6" fill="#42464A"/>
+    </g>
+  </g>
+
+  <!-- Soap 3: Center Elevated Hero Soap Bar -->
+  <g transform="translate(400, 490)" filter="url(#soapShadow)">
+    <circle cx="0" cy="0" r="85" fill="url(#charcoalSoapShine)"/>
+    <g fill="#18191B" stroke="#4B4F54" stroke-width="1.4">
+      <!-- Intricate multi-tier petals -->
+      <circle cx="0" cy="0" r="76" fill="none" stroke="#323438" stroke-width="10" stroke-dasharray="14 6"/>
+      <circle cx="0" cy="0" r="58" fill="none" stroke="#2A2C2F" stroke-width="10" stroke-dasharray="11 5"/>
+      <circle cx="0" cy="0" r="40" fill="none" stroke="#222426" stroke-width="8" stroke-dasharray="8 4"/>
+      <circle cx="0" cy="0" r="24" fill="#121314" stroke="#5E636A" stroke-width="1.8"/>
+      <circle cx="0" cy="0" r="12" fill="#090A0B" stroke="#7A818A" stroke-width="1.2"/>
+      <circle cx="0" cy="0" r="4" fill="#9BA2AB"/>
+    </g>
+  </g>
+
+  <!-- Front Foreground Soap with Maximum Detail -->
+  <g transform="translate(400, 660)" filter="url(#soapShadow)">
+    <circle cx="0" cy="0" r="80" fill="url(#charcoalSoapShine)"/>
+    <g fill="#1E2022" stroke="#4E5358" stroke-width="1.5">
+      <circle cx="0" cy="0" r="72" fill="none" stroke="#383B3F" stroke-width="9" stroke-dasharray="12 5"/>
+      <circle cx="0" cy="0" r="54" fill="none" stroke="#2E3034" stroke-width="9" stroke-dasharray="9 4"/>
+      <circle cx="0" cy="0" r="36" fill="none" stroke="#242629" stroke-width="7" stroke-dasharray="7 3"/>
+      <circle cx="0" cy="0" r="20" fill="#111213" stroke="#666C74" stroke-width="1.6"/>
+      <circle cx="0" cy="0" r="8" fill="#08090A" stroke="#8E96A0" stroke-width="1"/>
+      <circle cx="0" cy="0" r="3" fill="#B0B8C2"/>
+    </g>
+  </g>
+
+  <!-- Price Tag Box: ONLY ₹99/- (Exact match from poster) -->
+  <g transform="translate(80, 680)">
+    <rect x="0" y="0" width="160" height="95" rx="8" fill="#121314" stroke="url(#goldBadge)" stroke-width="2"/>
+    <text x="80" y="28" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#E5BD68" text-anchor="middle" letter-spacing="2">ONLY</text>
+    <text x="80" y="74" font-family="'Cormorant Garamond', Georgia, serif" font-size="44" font-weight="700" fill="#FFFFFF" text-anchor="middle">₹99/-</text>
+  </g>
+
+  <!-- Bottom Brand Switch Banner -->
+  <g transform="translate(400, 840)">
+    <!-- Parchment Ribbon -->
+    <path d="M -180 -25 L 180 -25 Q 190 -10 180 25 L -180 25 Q -190 -10 -180 -25 Z" fill="#EFE6D5" stroke="#263E2E" stroke-width="1.2"/>
+    <text x="0" y="-4" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" fill="#4B6652" text-anchor="middle" letter-spacing="1">Switch to Natural.</text>
+    <text x="0" y="16" font-family="'Cormorant Garamond', Georgia, serif" font-size="19" font-weight="700" fill="#1C2C20" text-anchor="middle" letter-spacing="1">Switch to Organic Bloom.</text>
+  </g>
+
+  <!-- 4 Quality Badges at Bottom -->
+  <g transform="translate(400, 930)" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#C9BAA7" text-anchor="middle">
+    <g transform="translate(-250, 0)">
+      <circle cx="0" cy="-14" r="14" fill="none" stroke="#D9A84E" stroke-width="1.2"/>
+      <text x="0" y="-9" font-size="12" fill="#D9A84E">✓</text>
+      <text x="0" y="14">PARABEN FREE</text>
+    </g>
+    <g transform="translate(-80, 0)">
+      <circle cx="0" cy="-14" r="14" fill="none" stroke="#D9A84E" stroke-width="1.2"/>
+      <text x="0" y="-9" font-size="12" fill="#D9A84E">✓</text>
+      <text x="0" y="14">SULPHATE FREE</text>
+    </g>
+    <g transform="translate(80, 0)">
+      <circle cx="0" cy="-14" r="14" fill="none" stroke="#D9A84E" stroke-width="1.2"/>
+      <text x="0" y="-9" font-size="12" fill="#D9A84E">♥</text>
+      <text x="0" y="14">CRUELTY FREE</text>
+    </g>
+    <g transform="translate(250, 0)">
+      <circle cx="0" cy="-14" r="14" fill="none" stroke="#D9A84E" stroke-width="1.2"/>
+      <text x="0" y="-9" font-size="12" fill="#D9A84E">♻</text>
+      <text x="0" y="14">ECO FRIENDLY</text>
+    </g>
+  </g>
+</svg>
